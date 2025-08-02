@@ -9,6 +9,7 @@ This is a mod for tekxit4 created by the users for the users.
 # Adds creative like flight with a chicken aftertaste.
 
 # Recipe
+<img width="252" height="125" alt="chicken_ring_recipe" src="https://github.com/user-attachments/assets/d67cf010-30c5-4da9-8856-529904931daf" />
 
 Ring can be crafted using:
  2 elytras
