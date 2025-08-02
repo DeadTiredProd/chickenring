@@ -22,15 +22,16 @@ Ring can be crafted using:
 This mod adds a few new blocks / recipes / items and functionality.
 
 # Raw Chicken Block
-<img width="16" height="16" alt="raw_chicken_block" src="https://github.com/user-attachments/assets/aedb68bc-9265-45d0-bb00-c52dfadc4f53" />
+<img width="745" height="537" alt="raw_chicken_block_preview" src="https://github.com/user-attachments/assets/ae6b5945-7ac1-441b-aee3-ee7c2b9ab6cd" />
+
 
 # Cooked Chicken Block
-<img width="16" height="16" alt="cooked_chicken_block" src="https://github.com/user-attachments/assets/ab4d5b84-25e7-4a90-8416-aa6cb021f3f7" />
+<img width="744" height="459" alt="cooked_chicken_block_preview" src="https://github.com/user-attachments/assets/c6a61988-2072-49b6-a25c-610bbbaf4cde" />
 
 # Rotting Chicken Block
-<img width="16" height="16" alt="rotting_chicken_block" src="https://github.com/user-attachments/assets/f2543214-9f6f-4da8-a5c1-f90226bebfc9" />
+<img width="688" height="527" alt="rotting_chicken_block_preview" src="https://github.com/user-attachments/assets/b7d31f13-a327-4661-ab92-6276960dbdb1" />
 
 # Items 
 
 # Rotting Chicken
-<img width="16" height="16" alt="rotting_chicken" src="https://github.com/user-attachments/assets/847f5f5b-144f-4b72-99eb-ad3b81c0f968" />
+<img width="414" height="267" alt="rotting_chicken_preview" src="https://github.com/user-attachments/assets/c0566207-3f66-44f3-b1e9-bb0aedcf49d6" />
