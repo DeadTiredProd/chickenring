@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "NDN",
+    "ECE",
+    "NDN"
+  ],
+  "key": {
+    "D": { "item": "minecraft:diamond_block" },
+    "N": { "item": "minecraft:nether_star" },
+    "C": { "item": "amethyst_imbuement:copper_ring" },
+    "E": { "item": "minecraft:elytra" }
+  },
+  "result": {
+    "item": "hellfiremadeit:chicken_ring",
+    "count": 1
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "RRR",
+    "RRR",
+    "RRR"
+  ],
+  "key": {
+    "R": { "item": "hellfiremadeit:rotting_chicken" }
+  },
+  "result": {
+    "item": "hellfiremadeit:rotting_chicken_block"
+  }
+}
