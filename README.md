@@ -28,17 +28,35 @@ This mod adds a few new blocks / recipes / items and functionality.
 <img width="745" height="537" alt="raw_chicken_block_preview" src="https://github.com/user-attachments/assets/ae6b5945-7ac1-441b-aee3-ee7c2b9ab6cd" />
 <img width="256" height="123" alt="raw_chicken_block_recipe_preview" src="https://github.com/user-attachments/assets/fdc657e9-0cf6-4858-b4e6-8df07a7b6f0b" />
 
+Raw chicken blocks will decay over time eventually turning them into Rotting chicken blocks. 
+To avoid bacterial contamination they must be stored within an inventory or a snow biome.
+
+Raw chicken will also rot if left exposed to the elements. 
+
+(currently not implemented - Meat Freezer)
+
+
 
 # Cooked Chicken Block
 <img width="744" height="459" alt="cooked_chicken_block_preview" src="https://github.com/user-attachments/assets/c6a61988-2072-49b6-a25c-610bbbaf4cde" />
 <img width="261" height="129" alt="cooked_chicken_block_recipe_preview" src="https://github.com/user-attachments/assets/7221b762-199e-485d-b549-b9754e51df8f" />
 
+Cooked chicken blocks can be obtained by crafting them like you would a diamond block. (using x9 cooked chicken).
+(smelting not implemented)
+
 # Rotting Chicken Block
 <img width="688" height="527" alt="rotting_chicken_block_preview" src="https://github.com/user-attachments/assets/b7d31f13-a327-4661-ab92-6276960dbdb1" />
 <img width="260" height="125" alt="rotting_chicken_block_recipe_preview" src="https://github.com/user-attachments/assets/045c5b6a-9ea6-494a-a9d5-21afa101552f" />
+
+Rotting chicken blocks are the decayed version of raw chicken blocks.  They currently serve no purpose other than a neat effect and a way to store rotting chicken easily. A plan to use them is already brewing. 
+
 
 # Items 
 
 # Rotting Chicken
 <img width="414" height="267" alt="rotting_chicken_preview" src="https://github.com/user-attachments/assets/c0566207-3f66-44f3-b1e9-bb0aedcf49d6" />
 <img width="258" height="131" alt="rotting_chicken_recipe_preview" src="https://github.com/user-attachments/assets/ec5c551f-fe7e-4171-a184-33122ce55e30" />
+
+Can be consumed providing more nutrition than rotten flesh and the same effects.
+
+Can be crafted  or obtained by leaving raw chicken on the ground 
