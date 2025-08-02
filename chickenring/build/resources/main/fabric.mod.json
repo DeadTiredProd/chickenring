@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "hellfiremadeit",
+  "version": "1.0.3",
+  "name": "Chicken Ring",
+  "description": "Fly like a chicken!",
+  "entrypoints": {
+    "main": [
+      "com.example.chickenring.ChickenRingMod"
+    ],
+    "client": [
+      "com.example.chickenring.client.ChickenRingClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.14.0",
+    "fabric": "*",
+    "minecraft": "1.19.2"
+  }
+}
