@@ -2,6 +2,7 @@
 This is a mod for tekxit4 created by the users for the users.  
 ![tekxit4](https://github.com/user-attachments/assets/85f0e94d-4cac-42b5-bb49-b3397b46130e)
 
+# Main use of the mod
 
 # Chicken Ring
 <img width="256" height="256" alt="Chicken_ring_256" src="https://github.com/user-attachments/assets/88f36bb3-b593-4c2d-896c-3663e6b3d095" />
@@ -16,6 +17,8 @@ Ring can be crafted using:
  4 nether stars
  1 copper ring (Amethyst imbuement mod dependent)
  2 corrupted chicken essence (not implemented yet)  use Diamond blocks instead.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Blocks 
 
