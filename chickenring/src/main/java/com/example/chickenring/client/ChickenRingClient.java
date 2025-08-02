@@ -23,7 +23,7 @@ public class ChickenRingClient implements ClientModInitializer {
         flyToggleKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(
             "key.chickenring.toggle_flight",
             InputUtil.Type.KEYSYM,
-            GLFW.GLFW_KEY_UNKNOWN, // Default: unassigned
+            GLFW.GLFW_KEY_UNKNOWN,
             "category.chickenring"
         ));
 
@@ -33,7 +33,6 @@ public class ChickenRingClient implements ClientModInitializer {
 
             boolean hasRing = hasChickenRing(player);
 
-            // Handle double-jump if no keybind is assigned
             if (hasRing && flyToggleKey.getDefaultKey().getCode() == GLFW.GLFW_KEY_UNKNOWN) {
                 boolean isJumping = MinecraftClient.getInstance().options.jumpKey.isPressed();
 
@@ -48,7 +47,6 @@ public class ChickenRingClient implements ClientModInitializer {
                 wasJumping = isJumping;
             }
 
-            // Handle toggle if keybind is assigned
             while (flyToggleKey.wasPressed()) {
                 if (hasRing) {
                     flightEnabled = !flightEnabled;
@@ -57,22 +55,23 @@ public class ChickenRingClient implements ClientModInitializer {
 
             if (hasRing) {
                 player.getAbilities().allowFlying = flightEnabled;
+                player.sendAbilitiesUpdate();
 
                 if (flightEnabled) {
-                    // Start flying automatically when jumping (if not already flying)
                     if (!player.getAbilities().flying &&
                             MinecraftClient.getInstance().options.jumpKey.isPressed()) {
                         player.getAbilities().flying = true;
+                        player.sendAbilitiesUpdate();
                     }
-
-                    // Prevent fall damage
                     player.fallDistance = 0.0f;
                 } else {
                     player.getAbilities().flying = false;
+                    player.sendAbilitiesUpdate();
                 }
             } else {
                 player.getAbilities().allowFlying = false;
                 player.getAbilities().flying = false;
+                player.sendAbilitiesUpdate();
                 flightEnabled = false;
             }
         });

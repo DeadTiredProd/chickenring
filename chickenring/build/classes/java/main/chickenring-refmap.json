@@ -1,0 +1,14 @@
+{
+  "mappings": {
+    "com/example/chickenring/mixin/ChickenRingFallMixin": {
+      "handleFallDamage": "Lnet/minecraft/class_1309;method_5747(FFLnet/minecraft/class_1282;)Z"
+    }
+  },
+  "data": {
+    "named:intermediary": {
+      "com/example/chickenring/mixin/ChickenRingFallMixin": {
+        "handleFallDamage": "Lnet/minecraft/class_1309;method_5747(FFLnet/minecraft/class_1282;)Z"
+      }
+    }
+  }
+}
