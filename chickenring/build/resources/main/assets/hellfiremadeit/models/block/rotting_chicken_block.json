@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "hellfiremadeit:block/rotting_chicken_block"
-  }
-}
