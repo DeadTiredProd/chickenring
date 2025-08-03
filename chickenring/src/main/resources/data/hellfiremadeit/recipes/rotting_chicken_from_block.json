@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "hellfiremadeit:rotting_chicken_block" }
+  ],
+  "result": {
+    "item": "hellfiremadeit:rotting_chicken",
+    "count": 9
+  }
+}

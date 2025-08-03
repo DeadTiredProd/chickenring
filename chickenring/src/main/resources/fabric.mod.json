@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "id": "hellfiremadeit",
-  "version": "1.0.3",
+  "version": "1.0.8",
   "name": "Chicken Ring",
-  "description": "Fly like a chicken!",
+  "description": "MMMMMM Chicken!",
   "entrypoints": {
     "main": [
       "com.example.chickenring.ChickenRingMod"

@@ -20,7 +20,12 @@ public class ChickenRingMod implements ModInitializer {
     public static final Item ROTTING_CHICKEN = new Item(new Item.Settings()
             .group(ItemGroup.FOOD)
             .food(ModFoodComponents.ROTTING_CHICKEN_FOOD));
+    
+    public static final Item FROZEN_ROTTING_CHICKEN = new Item(new Item.Settings()
+            .group(ItemGroup.FOOD)
+                    .food(ModFoodComponents.FROZEN_ROTTING_CHICKEN_FOOD));
 
+            
     public static final Block RAW_CHICKEN_BLOCK = new RawChickenBlock(
             Block.Settings.copy(net.minecraft.block.Blocks.WHITE_WOOL));
 
@@ -54,6 +59,10 @@ public class ChickenRingMod implements ModInitializer {
         Registry.register(Registry.ITEM,
                 new Identifier(MOD_ID, "rotting_chicken"),
                 ROTTING_CHICKEN);
+
+        Registry.register(Registry.ITEM,
+                new Identifier(MOD_ID, "frozen_rotting_chicken"),
+                FROZEN_ROTTING_CHICKEN);
 
         // Register raw chicken block + item
         Registry.register(Registry.BLOCK,
