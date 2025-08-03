@@ -33,6 +33,10 @@ To avoid bacterial contamination they must be stored within an inventory or a sn
 
 Raw chicken will also rot if left exposed to the elements. 
 
+# Frozen Raw Chicken Block 
+<img width="524" height="457" alt="frozen_raw_chicken_block_preview" src="https://github.com/user-attachments/assets/32b0e723-893f-49e1-aa65-c386564a37a9" />
+<img width="253" height="127" alt="frozen_raw_chicken_block_recipe_preview" src="https://github.com/user-attachments/assets/212bb27b-de15-40b1-bf11-9b258fd5e1f3" />
+
 (currently not implemented - Meat Freezer)
 
 
