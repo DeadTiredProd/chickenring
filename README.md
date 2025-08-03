@@ -84,8 +84,8 @@ Can be consumed providing more nutrition than rotten flesh and the same effects.
 Can be crafted  or obtained by leaving raw chicken on the ground 
 
 # Frozen Rotting Chicken
-<img width="672" height="468" alt="frozen_rotting_chicken_preview" src="https://github.com/user-attachments/assets/f587ae02-78f3-4636-b3a7-82ba3998de26" />
-<img width="383" height="383" alt="frozen_rotting_chicken_item_recipe_preview" src="https://github.com/user-attachments/assets/367265c7-b0b7-4aa9-97cd-0dc9811d40d6" />
+<img width="300" height="150" alt="frozen_rotting_chicken_preview" src="https://github.com/user-attachments/assets/f587ae02-78f3-4636-b3a7-82ba3998de26" />
+<img width="300" height="150" alt="frozen_rotting_chicken_item_recipe_preview" src="https://github.com/user-attachments/assets/367265c7-b0b7-4aa9-97cd-0dc9811d40d6" />
 
 Can be consumed providing less nutrition than rotten flesh and gives cold effects.
 Can be crafted  or obtained by leaving rotting chicken in the cold. 
