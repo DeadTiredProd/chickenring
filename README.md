@@ -65,13 +65,28 @@ they can be obtained through crafting or world interaction.
 
 Rotting chicken blocks are the decayed version of raw chicken blocks.  They currently serve no purpose other than a neat effect and a way to store rotting chicken easily. A plan to use them is already brewing. 
 
+# Frozen Rotting Chicken Block (Added - V1.0.8)
+<img width="767" height="516" alt="frozen_rotting_chicken_block_preview" src="https://github.com/user-attachments/assets/3166634b-1525-4c95-a330-d2009eb6c5d2" />
+<img width="261" height="126" alt="frozen_rotting_chicken_block_recipe_preview" src="https://github.com/user-attachments/assets/e3949c28-17fc-4be2-ae21-c3dad01932c8" />
+
+Frozen rotting chicken blocks are like rotting chicken blocks but they have been frozen after they rotted.
+they can be obtained through crafting or world interaction.
+
 
 # Items 
 
 # Rotting Chicken
 <img width="414" height="267" alt="rotting_chicken_preview" src="https://github.com/user-attachments/assets/c0566207-3f66-44f3-b1e9-bb0aedcf49d6" />
-<img width="258" height="131" alt="rotting_chicken_recipe_preview" src="https://github.com/user-attachments/assets/ec5c551f-fe7e-4171-a184-33122ce55e30" />
+<img width="386" height="387" alt="rotting_chicken_item_recipe_preview" src="https://github.com/user-attachments/assets/b2722bd3-c595-4af0-9916-5aed36124083" />
+
 
 Can be consumed providing more nutrition than rotten flesh and the same effects.
 
 Can be crafted  or obtained by leaving raw chicken on the ground 
+
+# Frozen Rotting Chicken
+<img width="300" height="200" alt="frozen_rotting_chicken_preview" src="https://github.com/user-attachments/assets/f587ae02-78f3-4636-b3a7-82ba3998de26" />
+<img width="383" height="383" alt="frozen_rotting_chicken_item_recipe_preview" src="https://github.com/user-attachments/assets/367265c7-b0b7-4aa9-97cd-0dc9811d40d6" />
+
+Can be consumed providing less nutrition than rotten flesh and gives cold effects.
+Can be crafted  or obtained by leaving rotting chicken in the cold. 
