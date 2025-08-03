@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CCC",
+    "CCC",
+    "CCC"
+  ],
+  "key": {
+    "C": { "item": "hellfiremadeit:chicken_egg_carton" }
+  },
+  "result": {
+    "item": "hellfiremadeit:chicken_egg_crate"
+  }
+}
