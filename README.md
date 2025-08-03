@@ -77,7 +77,8 @@ they can be obtained through crafting or world interaction.
 
 # Rotting Chicken
 <img width="414" height="267" alt="rotting_chicken_preview" src="https://github.com/user-attachments/assets/c0566207-3f66-44f3-b1e9-bb0aedcf49d6" />
-<img width="258" height="131" alt="rotting_chicken_recipe_preview" src="https://github.com/user-attachments/assets/ec5c551f-fe7e-4171-a184-33122ce55e30" />
+<img width="386" height="387" alt="rotting_chicken_item_recipe_preview" src="https://github.com/user-attachments/assets/b2722bd3-c595-4af0-9916-5aed36124083" />
+
 
 Can be consumed providing more nutrition than rotten flesh and the same effects.
 
