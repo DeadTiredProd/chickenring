@@ -65,6 +65,13 @@ they can be obtained through crafting or world interaction.
 
 Rotting chicken blocks are the decayed version of raw chicken blocks.  They currently serve no purpose other than a neat effect and a way to store rotting chicken easily. A plan to use them is already brewing. 
 
+# Frozen Rotting Chicken Block
+<img width="767" height="516" alt="frozen_rotting_chicken_block_preview" src="https://github.com/user-attachments/assets/3166634b-1525-4c95-a330-d2009eb6c5d2" />
+<img width="261" height="126" alt="frozen_rotting_chicken_block_recipe_preview" src="https://github.com/user-attachments/assets/e3949c28-17fc-4be2-ae21-c3dad01932c8" />
+
+Frozen rotting chicken blocks are like rotting chicken blocks but they have been frozen after they rotted.
+they can be obtained through crafting or world interaction.
+
 
 # Items 
 
