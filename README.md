@@ -49,7 +49,15 @@ They can be obtained through crafting or through normal enviormental changes.
 <img width="261" height="129" alt="cooked_chicken_block_recipe_preview" src="https://github.com/user-attachments/assets/7221b762-199e-485d-b549-b9754e51df8f" />
 
 Cooked chicken blocks can be obtained by crafting them like you would a diamond block. (using x9 cooked chicken).
+
 (smelting not implemented)
+
+# Frozen Cooked Chicken Block
+<img width="678" height="573" alt="frozen_cooked_chicken_block_preview" src="https://github.com/user-attachments/assets/14472b52-dfb5-453d-ae0b-c084a438422b" />
+<img width="255" height="129" alt="frozen_cooked_chicken_block_recipe_preview" src="https://github.com/user-attachments/assets/48bd9079-e42a-4210-9a40-5be363c8a83b" />
+
+Frozen cooked chicken blocks are like cooked chicken blocks but they have been frozen after being cooked.
+they can be obtained through crafting or world interaction.
 
 # Rotting Chicken Block
 <img width="688" height="527" alt="rotting_chicken_block_preview" src="https://github.com/user-attachments/assets/b7d31f13-a327-4661-ab92-6276960dbdb1" />
