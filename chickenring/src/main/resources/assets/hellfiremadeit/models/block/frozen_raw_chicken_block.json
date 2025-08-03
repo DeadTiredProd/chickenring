@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "hellfiremadeit:block/frozen_raw_chicken_block"
+  }
+}

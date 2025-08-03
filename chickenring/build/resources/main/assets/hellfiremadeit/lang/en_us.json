@@ -1,8 +1,13 @@
 {
-  "item.hellfiremadeit.chicken_ring": "Chicken Ring",
-  "item.hellfiremadeit.raw_chicken_block": "Raw Chicken Block",
-  "item.hellfiremadeit.cooked_chicken_block": "Cooked Chicken Block",
-  "item.hellfiremadeit.rotting_chicken_block": "Rotting Chicken Block",
-  "item.hellfiremadeit.rotting_chicken": "Rotting Chicken"
+  "item.hellfiremadeit.chicken_ring":                "Chicken Ring",
+  "item.hellfiremadeit.rotting_chicken":             "Rotting Chicken",
+  "item.hellfiremadeit.raw_chicken_block":           "Raw Chicken Block",
+  "item.hellfiremadeit.cooked_chicken_block":        "Cooked Chicken Block",
+  "item.hellfiremadeit.rotting_chicken_block":       "Rotting Chicken Block",
+  "item.hellfiremadeit.frozen_raw_chicken_block":    "Frozen Raw Chicken Block",
 
+  "block.hellfiremadeit.raw_chicken_block":          "Raw Chicken Block",
+  "block.hellfiremadeit.cooked_chicken_block":       "Cooked Chicken Block",
+  "block.hellfiremadeit.rotting_chicken_block":      "Rotting Chicken Block",
+  "block.hellfiremadeit.frozen_raw_chicken_block":   "Frozen Raw Chicken Block"
 }
