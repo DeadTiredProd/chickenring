@@ -38,8 +38,12 @@ public class ChickenRingMod implements ModInitializer {
     public static final Block FROZEN_COOKED_CHICKEN_BLOCK = new FrozenCookedChickenBlock(
             Block.Settings.of(Material.ICE)
                     .strength(0.5f)
-                    .ticksRandomly()
-    );
+                                    .ticksRandomly());
+                    
+    public static final Block FROZEN_ROTTING_CHICKEN_BLOCK = new FrozenRottingChickenBlock(
+            Block.Settings.of(Material.ICE)
+                    .strength(0.5f)
+                    .ticksRandomly());
 
     @Override
     public void onInitialize() {
@@ -58,7 +62,7 @@ public class ChickenRingMod implements ModInitializer {
         Registry.register(Registry.ITEM,
                 new Identifier(MOD_ID, "raw_chicken_block"),
                 new BlockItem(RAW_CHICKEN_BLOCK,
-                        new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+                        new Item.Settings().group(ItemGroup.FOOD)));
 
         // Register cooked chicken block + item
         Registry.register(Registry.BLOCK,
@@ -67,7 +71,7 @@ public class ChickenRingMod implements ModInitializer {
         Registry.register(Registry.ITEM,
                 new Identifier(MOD_ID, "cooked_chicken_block"),
                 new BlockItem(COOKED_CHICKEN_BLOCK,
-                        new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+                        new Item.Settings().group(ItemGroup.FOOD)));
 
         // Register rotting chicken block + item
         Registry.register(Registry.BLOCK,
@@ -76,7 +80,7 @@ public class ChickenRingMod implements ModInitializer {
         Registry.register(Registry.ITEM,
                 new Identifier(MOD_ID, "rotting_chicken_block"),
                 new BlockItem(ROTTING_CHICKEN_BLOCK,
-                        new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+                        new Item.Settings().group(ItemGroup.FOOD)));
 
         // Register frozen raw chicken block + item
         Registry.register(Registry.BLOCK,
@@ -94,7 +98,18 @@ public class ChickenRingMod implements ModInitializer {
         Registry.register(Registry.ITEM,
                 new Identifier(MOD_ID, "frozen_cooked_chicken_block"),
                 new BlockItem(FROZEN_COOKED_CHICKEN_BLOCK,
+                                        new Item.Settings().group(ItemGroup.FOOD)));
+        
+                        
+         // Register frozen rotting chicken block + item
+        Registry.register(Registry.BLOCK,
+                new Identifier(MOD_ID, "frozen_rotting_chicken_block"),
+                FROZEN_ROTTING_CHICKEN_BLOCK);
+        Registry.register(Registry.ITEM,
+                new Identifier(MOD_ID, "frozen_rotting_chicken_block"),
+                new BlockItem(FROZEN_ROTTING_CHICKEN_BLOCK,
                         new Item.Settings().group(ItemGroup.FOOD)));
+
 
 
         // Start the item-decay callback (rosting on ground)

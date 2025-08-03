@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "III",
+    "IRI",
+    "III"
+  ],
+  "key": {
+    "I": { "item": "minecraft:ice" },
+    "R": { "item": "hellfiremadeit:rotting_chicken_block" }
+  },
+  "result": {
+    "item": "hellfiremadeit:frozen_rotting_chicken_block",
+    "count": 1
+  }
+}
