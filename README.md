@@ -5,11 +5,13 @@ This is a mod for tekxit4 created by the users for the users.
 # Main use of the mod
 
 # Chicken Ring
+
 <img width="256" height="256" alt="Chicken_ring_256" src="https://github.com/user-attachments/assets/88f36bb3-b593-4c2d-896c-3663e6b3d095" />
 
 # Adds creative like flight with a chicken aftertaste.
 
 # Recipe
+
 <img width="252" height="125" alt="chicken_ring_recipe" src="https://github.com/user-attachments/assets/d67cf010-30c5-4da9-8856-529904931daf" />
 
 Ring can be crafted using:
@@ -25,6 +27,7 @@ Ring can be crafted using:
 This mod adds a few new blocks / recipes / items and functionality.
 
 # Raw Chicken Block
+
 <img width="745" height="537" alt="raw_chicken_block_preview" src="https://github.com/user-attachments/assets/ae6b5945-7ac1-441b-aee3-ee7c2b9ab6cd" />
 <img width="256" height="123" alt="raw_chicken_block_recipe_preview" src="https://github.com/user-attachments/assets/fdc657e9-0cf6-4858-b4e6-8df07a7b6f0b" />
 
@@ -34,6 +37,7 @@ To avoid bacterial contamination they must be stored within an inventory or a sn
 Raw chicken will also rot if left exposed to the elements. 
 
 # Frozen Raw Chicken Block 
+
 <img width="524" height="457" alt="frozen_raw_chicken_block_preview" src="https://github.com/user-attachments/assets/32b0e723-893f-49e1-aa65-c386564a37a9" />
 <img width="253" height="127" alt="frozen_raw_chicken_block_recipe_preview" src="https://github.com/user-attachments/assets/212bb27b-de15-40b1-bf11-9b258fd5e1f3" />
 
@@ -45,6 +49,7 @@ They can be obtained through crafting or through normal enviormental changes.
 
 
 # Cooked Chicken Block
+
 <img width="744" height="459" alt="cooked_chicken_block_preview" src="https://github.com/user-attachments/assets/c6a61988-2072-49b6-a25c-610bbbaf4cde" />
 <img width="261" height="129" alt="cooked_chicken_block_recipe_preview" src="https://github.com/user-attachments/assets/7221b762-199e-485d-b549-b9754e51df8f" />
 
@@ -53,6 +58,7 @@ Cooked chicken blocks can be obtained by crafting them like you would a diamond 
 (smelting not implemented)
 
 # Frozen Cooked Chicken Block
+
 <img width="678" height="573" alt="frozen_cooked_chicken_block_preview" src="https://github.com/user-attachments/assets/14472b52-dfb5-453d-ae0b-c084a438422b" />
 <img width="255" height="129" alt="frozen_cooked_chicken_block_recipe_preview" src="https://github.com/user-attachments/assets/48bd9079-e42a-4210-9a40-5be363c8a83b" />
 
@@ -60,12 +66,14 @@ Frozen cooked chicken blocks are like cooked chicken blocks but they have been f
 they can be obtained through crafting or world interaction.
 
 # Rotting Chicken Block
+
 <img width="688" height="527" alt="rotting_chicken_block_preview" src="https://github.com/user-attachments/assets/b7d31f13-a327-4661-ab92-6276960dbdb1" />
 <img width="260" height="125" alt="rotting_chicken_block_recipe_preview" src="https://github.com/user-attachments/assets/045c5b6a-9ea6-494a-a9d5-21afa101552f" />
 
 Rotting chicken blocks are the decayed version of raw chicken blocks.  They currently serve no purpose other than a neat effect and a way to store rotting chicken easily. A plan to use them is already brewing. 
 
 # Frozen Rotting Chicken Block (Added - V1.0.8)
+
 <img width="767" height="516" alt="frozen_rotting_chicken_block_preview" src="https://github.com/user-attachments/assets/3166634b-1525-4c95-a330-d2009eb6c5d2" />
 <img width="261" height="126" alt="frozen_rotting_chicken_block_recipe_preview" src="https://github.com/user-attachments/assets/e3949c28-17fc-4be2-ae21-c3dad01932c8" />
 
@@ -76,6 +84,7 @@ they can be obtained through crafting or world interaction.
 # Items 
 
 # Rotting Chicken
+
 <img width="414" height="267" alt="rotting_chicken_preview" src="https://github.com/user-attachments/assets/c0566207-3f66-44f3-b1e9-bb0aedcf49d6" />
 <img width="386" height="387" alt="rotting_chicken_item_recipe_preview" src="https://github.com/user-attachments/assets/b2722bd3-c595-4af0-9916-5aed36124083" />
 
@@ -85,6 +94,7 @@ Can be consumed providing more nutrition than rotten flesh and the same effects.
 Can be crafted  or obtained by leaving raw chicken on the ground 
 
 # Frozen Rotting Chicken
+
 <img width="300" height="200" alt="frozen_rotting_chicken_preview" src="https://github.com/user-attachments/assets/f587ae02-78f3-4636-b3a7-82ba3998de26" />
 <img width="383" height="383" alt="frozen_rotting_chicken_item_recipe_preview" src="https://github.com/user-attachments/assets/367265c7-b0b7-4aa9-97cd-0dc9811d40d6" />
 
@@ -92,15 +102,19 @@ Can be consumed providing less nutrition than rotten flesh and gives cold effect
 Can be crafted  or obtained by leaving rotting chicken in the cold. 
 
 # Chicken Dust
+
 <img width="303" height="240" alt="chicken_dust_preview" src="https://github.com/user-attachments/assets/45fcfa1a-9558-4a28-a244-a8fef44c3238" />
 <img width="297" height="265" alt="chicken_dust_recipe" src="https://github.com/user-attachments/assets/aa89f36e-3376-4044-9fa8-5ced087dc861" />
 
 Chicken dust can be obtained by grinding burnt chicken in a grinder.  1 burnt chicken yields 2 chicken dust.
 chicken dust can be spun in a centrifuge with a water cell to extract various elements.  
+
 <img width="371" height="280" alt="chicken_dust_centrifuge_recipe" src="https://github.com/user-attachments/assets/b663a40b-0a63-41ad-9030-b63c3e0f4381" />
+
 spinning chicken dust in a centrifuge with a water cell will return x3 Carbon Dust / x2 Calcium Dust / x1 Small Iron Dust Pile / x1 Dark Chicken Essence Cell
 
 # Dark Chicken Essence 
+
 <img width="645" height="659" alt="dark_chicken_essence_fluid_preview" src="https://github.com/user-attachments/assets/549e35a4-1f9f-4ac2-9e4e-f8ddbbc1cb69" />
 
 Dark chicken essence is the raw essence of chickens and can only be obtained through man made processes.
