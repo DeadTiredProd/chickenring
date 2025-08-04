@@ -97,6 +97,8 @@ Can be crafted  or obtained by leaving rotting chicken in the cold.
 
 Chicken dust can be obtained by grinding burnt chicken in a grinder.  1 burnt chicken yields 2 chicken dust.
 chicken dust can be spun in a centrifuge with a water cell to extract various elements.  
+<img width="371" height="280" alt="chicken_dust_centrifuge_recipe" src="https://github.com/user-attachments/assets/b663a40b-0a63-41ad-9030-b63c3e0f4381" />
+spinning chicken dust in a centrifuge with a water cell will return x3 Carbon Dust / x2 Calcium Dust / x1 Small Iron Dust Pile / x1 Dark Chicken Essence Cell
 
 # Dark Chicken Essence 
 <img width="645" height="659" alt="dark_chicken_essence_fluid_preview" src="https://github.com/user-attachments/assets/549e35a4-1f9f-4ac2-9e4e-f8ddbbc1cb69" />
