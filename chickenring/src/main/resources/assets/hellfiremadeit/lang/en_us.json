@@ -12,6 +12,7 @@
   "item.hellfiremadeit.dark_chicken_essence_cell":   "Dark Chicken Essence Cell",
   "block.hellfiremadeit.dark_chicken_essence_block": "Dark Chicken Essence",
   "item.hellfiremadeit.dark_chicken_essence_bucket": "Bucket of Dark Chicken Essence",
+  "item.hellfiremadeit.fowl_forge":                "Fowl Forge",
 
   "item.hellfiremadeit.raw_chicken_block":           "Raw Chicken Block",
   "item.hellfiremadeit.cooked_chicken_block":        "Cooked Chicken Block",
@@ -26,7 +27,7 @@
   "block.hellfiremadeit.frozen_raw_chicken_block":   "Frozen Raw Chicken Block",
   "block.hellfiremadeit.frozen_cooked_chicken_block": "Frozen Cooked Chicken Block",
   "block.hellfiremadeit.frozen_rotting_chicken_block": "Frozen Rotting Chicken Block",
-
+  "block.hellfiremadeit.fowl_forge":                "Fowl Forge",
   "item.hellfiremadeit.chicken_egg_carton":          "Chicken Egg Carton",
   "block.hellfiremadeit.chicken_egg_crate":          "Chicken Egg Crate",
   "item.hellfiremadeit.chicken_egg_crate":          "Chicken Egg Crate"

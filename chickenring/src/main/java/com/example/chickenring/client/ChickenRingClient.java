@@ -2,12 +2,14 @@ package com.example.chickenring.client;
 
 import com.example.chickenring.ChickenRingMod;
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.KeyBinding;
+import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -41,6 +43,8 @@ public class ChickenRingClient implements ClientModInitializer {
             GLFW.GLFW_KEY_UNKNOWN,
             "category.chickenring"
         ));
+
+        BlockRenderLayerMap.INSTANCE.putBlock(ChickenRingMod.FOWL_FORGE_BLOCK, RenderLayer.getCutout());
 
         // Client tick handler
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
