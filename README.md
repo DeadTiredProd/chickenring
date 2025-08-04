@@ -117,3 +117,5 @@ Spinning chicken dust in a centrifuge with a water cell will return x3 Carbon Du
 <img width="645" height="659" alt="dark_chicken_essence_fluid_preview" src="https://raw.githubusercontent.com/DeadTiredProd/chickenring/main/chickenring/images/previews/dark_chicken_essence_fluid_preview.png" />
 
 Dark chicken essence is the raw essence of chickens and can only be obtained through man made processes.
+
+updated readme
