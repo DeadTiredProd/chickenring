@@ -1,6 +1,5 @@
 # Chicken Ring Mod - v1.19.2 compatible mod (fabric)
 ![tekxit4](https://raw.githubusercontent.com/DeadTiredProd/chickenring/main/chickenring/images/previews/tekxit4.png)
-This is a mod for tekxit4 created by the users for the users. 
 # Main use of the mod
 
 # Chicken Ring
