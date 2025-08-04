@@ -1,0 +1,16 @@
+{
+  "type": "techreborn:grinder",
+  "power": 10,
+  "time": 200,
+  "ingredients": [
+    {
+      "item": "hellfiremadeit:burnt_chicken"
+    }
+  ],
+  "results": [
+    {
+      "item": "hellfiremadeit:chicken_dust",
+      "count": 2
+    }
+  ]
+}

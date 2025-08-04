@@ -24,6 +24,12 @@ public class ChickenRingMod implements ModInitializer {
             Block.Settings.copy(net.minecraft.block.Blocks.SAND));
 
     public static final Item BURNT_CHICKEN = new Item(new Item.Settings().group(ItemGroup.MISC));
+    
+    public static final Item CHICKEN_DUST = new Item(new Item.Settings().group(ItemGroup.MISC));
+    public static final Item CALCIUM_DUST = new Item(new Item.Settings().group(ItemGroup.MISC));
+    public static final Item CARBON_DUST = new Item(new Item.Settings().group(ItemGroup.MISC));
+    public static final Item SMALL_PILE_IRON_DUST = new Item(new Item.Settings().group(ItemGroup.MISC));
+    public static final Item DARK_CHICKEN_ESSENCE_CELL = new Item(new Item.Settings().group(ItemGroup.MISC).maxCount(16).fireproof());
 
     public static final Item ROTTING_CHICKEN = new Item(new Item.Settings()
             .group(ItemGroup.FOOD)
@@ -75,7 +81,33 @@ public class ChickenRingMod implements ModInitializer {
         // Register burnt chicken item
         Registry.register(Registry.ITEM,
                 new Identifier(MOD_ID, "burnt_chicken"),
-                BURNT_CHICKEN);
+                        BURNT_CHICKEN);
+
+        // Register chicken dust item
+        Registry.register(Registry.ITEM,
+                new Identifier(MOD_ID, "chicken_dust"),
+                        CHICKEN_DUST);
+                
+        // Register calcium dust item
+        Registry.register(Registry.ITEM,
+                new Identifier(MOD_ID, "calcium_dust"),
+                        CALCIUM_DUST);
+                
+        // Register burnt chicken item
+        Registry.register(Registry.ITEM,
+                new Identifier(MOD_ID, "carbon_dust"),
+                        CARBON_DUST);
+
+        // Register small pile iron dust item
+        Registry.register(Registry.ITEM,
+                new Identifier(MOD_ID, "small_pile_iron_dust"),
+                        SMALL_PILE_IRON_DUST);
+        
+        // Register dark chicken essence cell item
+        Registry.register(Registry.ITEM,
+                new Identifier(MOD_ID, "dark_chicken_essence_cell"),
+                DARK_CHICKEN_ESSENCE_CELL);
+
 
         Registry.register(Registry.ITEM,
                 new Identifier(MOD_ID, "chicken_egg_carton"),
@@ -123,9 +155,6 @@ public class ChickenRingMod implements ModInitializer {
                 new Identifier(MOD_ID, "cooked_chicken_block"),
                 new BlockItem(COOKED_CHICKEN_BLOCK,
                                         new Item.Settings().group(ItemGroup.FOOD)));
-                        
-        
-        
                         
         // Register rotting chicken block + item
         Registry.register(Registry.BLOCK,

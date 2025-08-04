@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "hellfiremadeit:item/small_pile_iron_dust"
+  }
+}

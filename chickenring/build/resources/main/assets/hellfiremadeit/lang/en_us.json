@@ -4,7 +4,13 @@
   "item.hellfiremadeit.frozen_rotting_chicken":      "Frozen Rotting Chicken",
   "item.hellfiremadeit.frozen_cooked_chicken":       "Frozen Cooked Chicken",
   "item.hellfiremadeit.frozen_raw_chicken":          "Frozen Raw Chicken",
-  "item.hellfiremadeit.burnt_chicken":              "Burnt Chicken",
+  "item.hellfiremadeit.burnt_chicken":               "Burnt Chicken",
+  "item.hellfiremadeit.chicken_dust":                "Chicken Dust",
+  "item.hellfiremadeit.calcium,_dust":               "Calcium Dust",
+  "item.hellfiremadeit.carbon_dust":                 "Carbon Dust",
+  "item.hellfiremadeit.small_pile_iron_dust":        "Small Iron Dust Pile",
+  "item.hellfiremadeit.dark_chicken_essence_cell":   "Dark Chicken Essence Cell",
+  
 
   "item.hellfiremadeit.raw_chicken_block":           "Raw Chicken Block",
   "item.hellfiremadeit.cooked_chicken_block":        "Cooked Chicken Block",
