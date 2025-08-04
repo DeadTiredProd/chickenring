@@ -10,7 +10,8 @@
   "item.hellfiremadeit.carbon_dust":                 "Carbon Dust",
   "item.hellfiremadeit.small_pile_iron_dust":        "Small Iron Dust Pile",
   "item.hellfiremadeit.dark_chicken_essence_cell":   "Dark Chicken Essence Cell",
-  
+  "block.hellfiremadeit.dark_chicken_essence_block": "Dark Chicken Essence",
+  "item.hellfiremadeit.dark_chicken_essence_bucket": "Bucket of Dark Chicken Essence",
 
   "item.hellfiremadeit.raw_chicken_block":           "Raw Chicken Block",
   "item.hellfiremadeit.cooked_chicken_block":        "Cooked Chicken Block",

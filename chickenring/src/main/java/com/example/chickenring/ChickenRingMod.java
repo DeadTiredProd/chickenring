@@ -1,11 +1,22 @@
 package com.example.chickenring;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandler;
+import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
+import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.FluidBlock;
 import net.minecraft.block.Material;
+import net.minecraft.client.render.RenderLayer;
+import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.item.BlockItem;
+import net.minecraft.item.BucketItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -69,7 +80,15 @@ public class ChickenRingMod implements ModInitializer {
     public static final Block FROZEN_ROTTING_CHICKEN_BLOCK = new FrozenRottingChickenBlock(
             Block.Settings.of(Material.ICE)
                     .strength(0.5f)
-                    .ticksRandomly());
+                                    .ticksRandomly());
+    
+                    
+     // Fluids
+        public static FlowableFluid DARK_CHICKEN_ESSENCE_STILL;
+        public static FlowableFluid DARK_CHICKEN_ESSENCE_FLOWING;
+        public static Block DARK_CHICKEN_ESSENCE_BLOCK;
+        public static Item DARK_CHICKEN_ESSENCE_BUCKET;   
+
 
     @Override
     public void onInitialize() {
@@ -194,8 +213,39 @@ public class ChickenRingMod implements ModInitializer {
                         new Item.Settings().group(ItemGroup.FOOD)));
 
 
+        DARK_CHICKEN_ESSENCE_STILL = Registry.register(Registry.FLUID,
+                new Identifier(MOD_ID, "dark_chicken_essence_still"),
+        new DarkChickenEssenceFluid.Still());
+
+        DARK_CHICKEN_ESSENCE_FLOWING = Registry.register(Registry.FLUID,
+         new Identifier(MOD_ID, "dark_chicken_essence_flowing"),
+        new DarkChickenEssenceFluid.Flowing());
+
+        DARK_CHICKEN_ESSENCE_BLOCK = Registry.register(Registry.BLOCK,
+        new Identifier(MOD_ID, "dark_chicken_essence_block"),
+        new FluidBlock(DARK_CHICKEN_ESSENCE_STILL, FabricBlockSettings.copyOf(Blocks.WATER)){});
+
+        DARK_CHICKEN_ESSENCE_BUCKET = Registry.register(Registry.ITEM,
+         new Identifier(MOD_ID, "dark_chicken_essence_bucket"),
+        new BucketItem(DARK_CHICKEN_ESSENCE_STILL, new Item.Settings().recipeRemainder(Items.BUCKET).maxCount(1).group(ItemGroup.MISC)));
 
         // Start the item-decay callback (rosting on ground)
         ItemDecayCallback.register();
+
+        FluidRenderHandler fluidRenderHandler = new SimpleFluidRenderHandler(
+        new Identifier("hellfiremadeit:block/dark_chicken_essence_still"),
+        new Identifier("hellfiremadeit:block/dark_chicken_essence_flow"),
+        0xFF3E0066 // Purple-ish tint (ARGB)
+    );
+
+    FluidRenderHandlerRegistry.INSTANCE.register(
+        ChickenRingMod.DARK_CHICKEN_ESSENCE_STILL,
+        ChickenRingMod.DARK_CHICKEN_ESSENCE_FLOWING,
+        fluidRenderHandler
+    );
+
+    BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(),
+        ChickenRingMod.DARK_CHICKEN_ESSENCE_STILL,
+        ChickenRingMod.DARK_CHICKEN_ESSENCE_FLOWING);
     }
 }
