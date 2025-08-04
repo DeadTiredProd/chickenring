@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "hellfiremadeit:frozen_raw_chicken_block"
+  },
+  "result": "hellfiremadeit:raw_chicken_block",
+  "experience": 0.35,
+  "cookingtime": 225
+}

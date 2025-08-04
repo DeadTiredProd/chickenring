@@ -23,6 +23,8 @@ public class ChickenRingMod implements ModInitializer {
     public static final Block CHICKEN_EGG_CRATE = new ChickenEggCrateBlock(
             Block.Settings.copy(net.minecraft.block.Blocks.SAND));
 
+    public static final Item BURNT_CHICKEN = new Item(new Item.Settings().group(ItemGroup.MISC));
+
     public static final Item ROTTING_CHICKEN = new Item(new Item.Settings()
             .group(ItemGroup.FOOD)
             .food(ModFoodComponents.ROTTING_CHICKEN_FOOD));
@@ -69,6 +71,11 @@ public class ChickenRingMod implements ModInitializer {
         Registry.register(Registry.ITEM,
                 new Identifier(MOD_ID, "chicken_ring"),
                         CHICKEN_RING);
+        
+        // Register burnt chicken item
+        Registry.register(Registry.ITEM,
+                new Identifier(MOD_ID, "burnt_chicken"),
+                BURNT_CHICKEN);
 
         Registry.register(Registry.ITEM,
                 new Identifier(MOD_ID, "chicken_egg_carton"),
@@ -115,8 +122,11 @@ public class ChickenRingMod implements ModInitializer {
         Registry.register(Registry.ITEM,
                 new Identifier(MOD_ID, "cooked_chicken_block"),
                 new BlockItem(COOKED_CHICKEN_BLOCK,
-                        new Item.Settings().group(ItemGroup.FOOD)));
-
+                                        new Item.Settings().group(ItemGroup.FOOD)));
+                        
+        
+        
+                        
         // Register rotting chicken block + item
         Registry.register(Registry.BLOCK,
                 new Identifier(MOD_ID, "rotting_chicken_block"),

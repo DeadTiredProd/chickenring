@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CCC",
+    "CLC",
+    "CCC"
+  ],
+  "key": {
+    "C": { "item": "minecraft:chicken" },
+    "L": { "item": "minecraft:lava_bucket" }
+  },
+  "results": [
+    { "item": "hellfiremadeit:burnt_chicken", "count": 8 },
+    { "item": "minecraft:bucket", "count": 1 }
+  ]
+}

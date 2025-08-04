@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "minecraft:cooked_chicken"
+  },
+  "result": "hellfiremadeit:burnt_chicken",
+  "experience": 0.35,
+  "cookingtime": 200
+}

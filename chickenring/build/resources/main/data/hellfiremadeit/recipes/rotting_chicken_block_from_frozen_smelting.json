@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "hellfiremadeit:frozen_rotting_chicken_block"
+  },
+  "result": "hellfiremadeit:rotting_chicken_block",
+  "experience": 0.10,
+  "cookingtime": 175
+}
