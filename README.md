@@ -90,3 +90,17 @@ Can be crafted  or obtained by leaving raw chicken on the ground
 
 Can be consumed providing less nutrition than rotten flesh and gives cold effects.
 Can be crafted  or obtained by leaving rotting chicken in the cold. 
+
+# Chicken Dust
+<img width="303" height="240" alt="chicken_dust_preview" src="https://github.com/user-attachments/assets/45fcfa1a-9558-4a28-a244-a8fef44c3238" />
+<img width="297" height="265" alt="chicken_dust_recipe" src="https://github.com/user-attachments/assets/aa89f36e-3376-4044-9fa8-5ced087dc861" />
+
+Chicken dust can be obtained by grinding burnt chicken in a grinder.  1 burnt chicken yields 2 chicken dust.
+chicken dust can be spun in a centrifuge with a water cell to extract various elements.  
+
+# Dark Chicken Essence 
+<img width="645" height="659" alt="dark_chicken_essence_fluid_preview" src="https://github.com/user-attachments/assets/549e35a4-1f9f-4ac2-9e4e-f8ddbbc1cb69" />
+
+Dark chicken essence is the raw essence of chickens and can only be obtained through man made processes.
+
+
