@@ -1,0 +1,19 @@
+{
+    "type": "hellfiremadeit:fowl_forge",
+    "ingredients": [
+        {"item": "hellfiremadeit:chicken_dust"},
+        {"item": "hellfiremadeit:chicken_dust"},
+        {"item": "hellfiremadeit:chicken_dust"},
+        {"item": "hellfiremadeit:chicken_dust"},
+        {"item": "hellfiremadeit:chicken_dust"},
+        {"item": "hellfiremadeit:chicken_dust"},
+        {"item": "hellfiremadeit:chicken_dust"},
+        {"item": "hellfiremadeit:chicken_dust"},
+        {"item": "hellfiremadeit:chicken_dust"}
+    ],
+    "result": {
+        "item": "minecraft:diamond",
+        "count": 1
+    },
+    "essence": 150
+}

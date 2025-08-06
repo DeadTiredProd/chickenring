@@ -2,6 +2,7 @@ package com.example.chickenring.client;
 
 import com.example.chickenring.ChickenRingMod;
 import com.example.chickenring.FowlForgeScreen;
+import com.example.chickenring.FowlForgeBlockEntityRenderer;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
@@ -12,6 +13,7 @@ import net.minecraft.client.MinecraftClient;
 import net.fabricmc.fabric.api.client.screenhandler.v1.ScreenRegistry;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -28,6 +30,8 @@ public class ChickenRingClient implements ClientModInitializer {
     @SuppressWarnings("deprecation")
     @Override
     public void onInitializeClient() {
+
+        BlockEntityRendererFactories.register(ChickenRingMod.FOWL_FORGE_BLOCK_ENTITY, FowlForgeBlockEntityRenderer::new);
         // Register the fluid render handler (uses vanilla water textures + tint)
         FluidRenderHandlerRegistry.INSTANCE.register(
             ChickenRingMod.DARK_CHICKEN_ESSENCE_STILL,

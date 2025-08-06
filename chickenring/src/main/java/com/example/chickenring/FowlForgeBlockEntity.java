@@ -53,7 +53,32 @@ public class FowlForgeBlockEntity extends BlockEntity implements Inventory, Exte
     public static void tick(World world, BlockPos pos, BlockState state, FowlForgeBlockEntity be) {
         if (!world.isClient) {
             be.handleFluidSlot();
-            // Later: handle recipes
+            be.handleCrafting();
+        }
+    }
+
+    private void handleCrafting() {
+        if (items.get(10).isEmpty()) { // Only craft if output slot is empty
+            world.getRecipeManager()
+                .getFirstMatch(ChickenRingMod.FOWL_FORGE_RECIPE_TYPE, this, world)
+                .ifPresent(recipe -> {
+                    if (storedEssence >= recipe.getEssenceCost()) {
+                        // Consume ingredients
+                        for (int i = 0; i < 9; i++) {
+                            ItemStack stack = items.get(i + 1);
+                            stack.decrement(1);
+                            items.set(i + 1, stack);
+                        }
+                        // Consume essence
+                        storedEssence -= recipe.getEssenceCost();
+                        // Set output
+                        items.set(10, recipe.craft(this));
+                        markDirty();
+                        if (world != null) {
+                            world.updateListeners(pos, getCachedState(), getCachedState(), 3);
+                        }
+                    }
+                });
         }
     }
 

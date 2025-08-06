@@ -76,7 +76,7 @@ public class FowlForgeScreenHandler extends ScreenHandler {
 
     @Override
     public boolean canUse(PlayerEntity player) {
-        return blockEntity.canPlayerUse(player);
+        return context.get((world, pos) -> world.getBlockEntity(pos) instanceof FowlForgeBlockEntity && player.squaredDistanceTo(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5) <= 64.0, true);
     }
 
     @Override

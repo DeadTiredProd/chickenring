@@ -20,6 +20,8 @@ import net.minecraft.item.BucketItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Items;
+import net.minecraft.recipe.RecipeSerializer;
+import net.minecraft.recipe.RecipeType;
 import net.minecraft.screen.ScreenHandlerContext;
 import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.util.Identifier;
@@ -28,6 +30,15 @@ import net.minecraft.util.registry.Registry;
 
 public class ChickenRingMod implements ModInitializer {
     public static final String MOD_ID = "hellfiremadeit";
+
+
+    // Recipe Type
+    public static final RecipeType<FowlForgeRecipe> FOWL_FORGE_RECIPE_TYPE =
+        RecipeType.register(MOD_ID + ":fowl_forge");
+
+    // Recipe Serializer
+    public static final RecipeSerializer<FowlForgeRecipe> FOWL_FORGE_RECIPE_SERIALIZER =
+        new FowlForgeRecipeSerializer();
 
     // --------------------
     // Custom Items
@@ -117,6 +128,8 @@ public class ChickenRingMod implements ModInitializer {
 
     @Override
     public void onInitialize() {
+
+
         // Register Fowl Forge block + item
         FOWL_FORGE_BLOCK = Registry.register(
             Registry.BLOCK,
@@ -152,6 +165,11 @@ public class ChickenRingMod implements ModInitializer {
             }
         );
         FOWL_FORGE_SCREEN_HANDLER = localScreenHandler;
+        
+        // Register recipe serializer
+        Registry.register(Registry.RECIPE_SERIALIZER,
+            new Identifier(MOD_ID, "fowl_forge"),
+            FOWL_FORGE_RECIPE_SERIALIZER);
 
         // Register other blocks/items
         registerBlockWithItem("chicken_egg_crate", CHICKEN_EGG_CRATE, ItemGroup.FOOD);
