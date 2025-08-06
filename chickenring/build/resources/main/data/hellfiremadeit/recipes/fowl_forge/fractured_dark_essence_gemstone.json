@@ -1,0 +1,19 @@
+{
+    "type": "hellfiremadeit:fowl_forge",
+    "ingredients": [
+        {"item": "hellfiremadeit:chicken_dust"},
+        {"item": "hellfiremadeit:dark_chicken_essence_ingot"},
+        {"item": "hellfiremadeit:raw_chicken_ingot"},
+        {"item": "hellfiremadeit:rotting_chicken_ingot"},
+        {"item": "minecraft:diamond"},
+        {"item": "hellfiremadeit:rotting_chicken_ingot"},
+        {"item": "hellfiremadeit:raw_chicken_ingot"},
+        {"item": "hellfiremadeit:dark_chicken_essence_ingot"},
+        {"item": "hellfiremadeit:chicken_dust"}
+    ],
+    "result": {
+        "item": "hellfiremadeit:fractured_dark_essence_gemstone",
+        "count": 1
+    },
+    "essence": 1000
+}

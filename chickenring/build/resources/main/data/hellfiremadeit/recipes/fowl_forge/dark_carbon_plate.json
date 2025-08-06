@@ -1,0 +1,19 @@
+{
+    "type": "hellfiremadeit:fowl_forge",
+    "ingredients": [
+        {"item": "hellfiremadeit:rotting_chicken_ingot"},
+        {"item": "hellfiremadeit:carbon_plate"},
+        {"item": "hellfiremadeit:raw_chicken_ingot"},
+        {"item": "hellfiremadeit:carbon_dust"},
+        {"item": "hellfiremadeit:chicken_dust"},
+        {"item": "hellfiremadeit:carbon_dust"},
+        {"item": "hellfiremadeit:raw_chicken_ingot"},
+        {"item": "hellfiremadeit:carbon_plate"},
+        {"item": "hellfiremadeit:rotting_chicken_ingot"}
+    ],
+    "result": {
+        "item": "hellfiremadeit:dark_carbon_plate",
+        "count": 2
+    },
+    "essence": 300
+}

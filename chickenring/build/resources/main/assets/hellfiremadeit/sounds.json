@@ -1,0 +1,11 @@
+{
+  "fowl_forge_ambient0": {
+    "category": "block",
+    "sounds": [
+      {
+        "name": "hellfiremadeit:fowl_forge_ambient0",
+        "stream": true
+      }
+    ]
+  }
+}

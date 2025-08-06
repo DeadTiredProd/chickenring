@@ -24,6 +24,7 @@ import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.RecipeType;
 import net.minecraft.screen.ScreenHandlerContext;
 import net.minecraft.screen.ScreenHandlerType;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.registry.Registry;
@@ -39,6 +40,9 @@ public class ChickenRingMod implements ModInitializer {
     // Recipe Serializer
     public static final RecipeSerializer<FowlForgeRecipe> FOWL_FORGE_RECIPE_SERIALIZER =
         new FowlForgeRecipeSerializer();
+
+    public static final SoundEvent FOWL_FORGE_AMBIENT = new SoundEvent(new Identifier(MOD_ID, "fowl_forge_ambient0"));
+
 
     // --------------------
     // Custom Items
@@ -56,6 +60,14 @@ public class ChickenRingMod implements ModInitializer {
     public static final Item CHICKEN_DUST = new Item(new Item.Settings().group(ItemGroup.MISC));
     public static final Item CALCIUM_DUST = new Item(new Item.Settings().group(ItemGroup.MISC));
     public static final Item CARBON_DUST = new Item(new Item.Settings().group(ItemGroup.MISC));
+    public static final Item FRACTURED_DARK_ESSENCE_GEMSTONE = new Item(new Item.Settings().group(ItemGroup.MISC));
+    public static final Item FLAWLESS_DARK_ESSENCE_GEMSTONE = new Item(new Item.Settings().group(ItemGroup.MISC));
+    public static final Item CARBON_PLATE = new Item(new Item.Settings().group(ItemGroup.MISC));
+    public static final Item DARK_CARBON_PLATE = new Item(new Item.Settings().group(ItemGroup.MISC));
+    public static final Item RAW_CHICKEN_INGOT = new Item(new Item.Settings().group(ItemGroup.MISC));
+    public static final Item COOKED_CHICKEN_INGOT = new Item(new Item.Settings().group(ItemGroup.MISC));
+    public static final Item ROTTING_CHICKEN_INGOT = new Item(new Item.Settings().group(ItemGroup.MISC));
+    public static final Item DARK_CHICKEN_ESSENCE_INGOT = new Item(new Item.Settings().group(ItemGroup.MISC));
     public static final Item SMALL_PILE_IRON_DUST = new Item(new Item.Settings().group(ItemGroup.MISC));
     public static final Item DARK_CHICKEN_ESSENCE_CELL = new Item(new Item.Settings()
         .group(ItemGroup.MISC)
@@ -129,6 +141,10 @@ public class ChickenRingMod implements ModInitializer {
     @Override
     public void onInitialize() {
 
+        System.out.println("ChickenRingMod: Initializing...");
+        
+        Registry.register(Registry.SOUND_EVENT, new Identifier(MOD_ID, "fowl_forge_ambient0"), FOWL_FORGE_AMBIENT);
+        System.out.println("ChickenRingMod: Registered sound event for Fowl Forge ambient sound");
 
         // Register Fowl Forge block + item
         FOWL_FORGE_BLOCK = Registry.register(
@@ -171,7 +187,8 @@ public class ChickenRingMod implements ModInitializer {
             new Identifier(MOD_ID, "fowl_forge"),
             FOWL_FORGE_RECIPE_SERIALIZER);
 
-        // Register other blocks/items
+    
+            // Register other blocks/items
         registerBlockWithItem("chicken_egg_crate", CHICKEN_EGG_CRATE, ItemGroup.FOOD);
         registerBlockWithItem("raw_chicken_block", RAW_CHICKEN_BLOCK, ItemGroup.FOOD);
         registerBlockWithItem("cooked_chicken_block", COOKED_CHICKEN_BLOCK, ItemGroup.FOOD);
@@ -188,6 +205,14 @@ public class ChickenRingMod implements ModInitializer {
         registerItem("carbon_dust", CARBON_DUST);
         registerItem("small_pile_iron_dust", SMALL_PILE_IRON_DUST);
         registerItem("dark_chicken_essence_cell", DARK_CHICKEN_ESSENCE_CELL);
+        registerItem("fractured_dark_essence_gemstone", FRACTURED_DARK_ESSENCE_GEMSTONE);
+        registerItem("flawless_dark_essence_gemstone", FLAWLESS_DARK_ESSENCE_GEMSTONE);
+        registerItem("carbon_plate", CARBON_PLATE);
+        registerItem("dark_carbon_plate", DARK_CARBON_PLATE);
+        registerItem("raw_chicken_ingot", RAW_CHICKEN_INGOT);
+        registerItem("cooked_chicken_ingot", COOKED_CHICKEN_INGOT);
+        registerItem("rotting_chicken_ingot", ROTTING_CHICKEN_INGOT);
+        registerItem("dark_chicken_essence_ingot", DARK_CHICKEN_ESSENCE_INGOT);
         registerItem("rotting_chicken", ROTTING_CHICKEN);
         registerItem("frozen_rotting_chicken", FROZEN_ROTTING_CHICKEN);
         registerItem("frozen_raw_chicken", FROZEN_RAW_CHICKEN);

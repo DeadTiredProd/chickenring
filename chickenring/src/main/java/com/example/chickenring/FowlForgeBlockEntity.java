@@ -11,19 +11,23 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.ScreenHandlerContext;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.server.network.ServerPlayerEntity;
+import java.util.Optional;
 
 public class FowlForgeBlockEntity extends BlockEntity implements Inventory, ExtendedScreenHandlerFactory {
     public static final long CAPACITY_MB = 12000; // 12,000 mB = 12 L
     private long storedEssence = 0;
-
+    private int soundTimer = 0;
+    private static final int SOUND_INTERVAL = 6000; // Play sound every 5 minutes (6000 ticks = 300 seconds)
     // 11-slot inventory: 0=fluid, 1–9=inputs, 10=output
     private final DefaultedList<ItemStack> items = DefaultedList.ofSize(11, ItemStack.EMPTY);
+    private Optional<FowlForgeRecipe> currentRecipe = Optional.empty();
 
     private final PropertyDelegate delegate = new PropertyDelegate() {
         @Override
@@ -52,33 +56,66 @@ public class FowlForgeBlockEntity extends BlockEntity implements Inventory, Exte
 
     public static void tick(World world, BlockPos pos, BlockState state, FowlForgeBlockEntity be) {
         if (!world.isClient) {
+            // Play ambient sound if essence > 1000 mB
+            if (be.storedEssence > 1000) {
+                be.soundTimer++;
+                if (be.soundTimer >= SOUND_INTERVAL) {
+                    System.out.println("FowlForge: Playing ambient sound at " + pos + ", essence: " + be.storedEssence);
+                    world.playSound(null, pos, ChickenRingMod.FOWL_FORGE_AMBIENT, SoundCategory.BLOCKS, 0.5f, 1.0f);
+                    be.soundTimer = 0;
+                }
+            } else {
+                be.soundTimer = 0;
+            }
+
             be.handleFluidSlot();
             be.handleCrafting();
         }
     }
 
     private void handleCrafting() {
-        if (items.get(10).isEmpty()) { // Only craft if output slot is empty
-            world.getRecipeManager()
-                .getFirstMatch(ChickenRingMod.FOWL_FORGE_RECIPE_TYPE, this, world)
-                .ifPresent(recipe -> {
-                    if (storedEssence >= recipe.getEssenceCost()) {
-                        // Consume ingredients
-                        for (int i = 0; i < 9; i++) {
-                            ItemStack stack = items.get(i + 1);
-                            stack.decrement(1);
-                            items.set(i + 1, stack);
-                        }
-                        // Consume essence
-                        storedEssence -= recipe.getEssenceCost();
-                        // Set output
-                        items.set(10, recipe.craft(this));
-                        markDirty();
-                        if (world != null) {
-                            world.updateListeners(pos, getCachedState(), getCachedState(), 3);
-                        }
-                    }
-                });
+        if (items.get(10).isEmpty()) { // Only check for recipe if output slot is empty
+            Optional<FowlForgeRecipe> recipe = world.getRecipeManager()
+                .getFirstMatch(ChickenRingMod.FOWL_FORGE_RECIPE_TYPE, this, world);
+            if (recipe.isPresent() && storedEssence >= recipe.get().getEssenceCost()) {
+                currentRecipe = recipe;
+                items.set(10, recipe.get().craft(this));
+                System.out.println("FowlForge: Previewing recipe output: " + recipe.get().getId());
+                markDirty();
+                if (world != null) {
+                    world.updateListeners(pos, getCachedState(), getCachedState(), 3);
+                }
+            } else {
+                currentRecipe = Optional.empty();
+            }
+        } else if (!items.get(10).isEmpty() && currentRecipe.isEmpty()) {
+            // Clear output if no valid recipe matches (e.g., ingredients changed)
+            items.set(10, ItemStack.EMPTY);
+            markDirty();
+            if (world != null) {
+                world.updateListeners(pos, getCachedState(), getCachedState(), 3);
+            }
+        }
+    }
+
+    private void consumeIngredientsAndEssence() {
+        if (currentRecipe.isPresent() && storedEssence >= currentRecipe.get().getEssenceCost()) {
+            // Consume ingredients
+            for (int i = 0; i < 9; i++) {
+                ItemStack stack = items.get(i + 1);
+                if (!stack.isEmpty()) {
+                    stack.decrement(1);
+                    items.set(i + 1, stack);
+                }
+            }
+            // Consume essence
+            storedEssence -= currentRecipe.get().getEssenceCost();
+            System.out.println("FowlForge: Consumed ingredients and " + currentRecipe.get().getEssenceCost() + " mB essence");
+            currentRecipe = Optional.empty();
+            markDirty();
+            if (world != null) {
+                world.updateListeners(pos, getCachedState(), getCachedState(), 3);
+            }
         }
     }
 
@@ -89,6 +126,7 @@ public class FowlForgeBlockEntity extends BlockEntity implements Inventory, Exte
                 if (storedEssence + 1000 <= CAPACITY_MB) {
                     storedEssence += 1000;
                     items.set(0, new ItemStack(net.minecraft.item.Items.BUCKET));
+                    System.out.println("FowlForge: Added 1000 mB, storedEssence: " + storedEssence);
                     markDirty();
                     if (world != null) {
                         world.updateListeners(pos, getCachedState(), getCachedState(), 3);
@@ -98,12 +136,58 @@ public class FowlForgeBlockEntity extends BlockEntity implements Inventory, Exte
                 if (storedEssence + 100 <= CAPACITY_MB) {
                     storedEssence += 100;
                     items.set(0, ItemStack.EMPTY);
+                    System.out.println("FowlForge: Added 100 mB, storedEssence: " + storedEssence);
                     markDirty();
                     if (world != null) {
                         world.updateListeners(pos, getCachedState(), getCachedState(), 3);
                     }
                 }
             }
+        }
+    }
+
+    @Override
+    public ItemStack removeStack(int slot, int amount) {
+        ItemStack ret = Inventories.splitStack(items, slot, amount);
+        if (!ret.isEmpty() && slot == 10) {
+            consumeIngredientsAndEssence();
+        }
+        if (!ret.isEmpty()) {
+            markDirty();
+            if (world != null) {
+                world.updateListeners(pos, getCachedState(), getCachedState(), 3);
+            }
+        }
+        return ret;
+    }
+
+    @Override
+    public ItemStack removeStack(int slot) {
+        ItemStack ret = Inventories.removeStack(items, slot);
+        if (!ret.isEmpty() && slot == 10) {
+            consumeIngredientsAndEssence();
+        }
+        if (!ret.isEmpty()) {
+            markDirty();
+            if (world != null) {
+                world.updateListeners(pos, getCachedState(), getCachedState(), 3);
+            }
+        }
+        return ret;
+    }
+
+    @Override
+    public void setStack(int slot, ItemStack stack) {
+        items.set(slot, stack);
+        if (stack.getCount() > getMaxCountPerStack()) {
+            stack.setCount(getMaxCountPerStack());
+        }
+        if (slot == 10 && stack.isEmpty()) {
+            consumeIngredientsAndEssence();
+        }
+        markDirty();
+        if (world != null) {
+            world.updateListeners(pos, getCachedState(), getCachedState(), 3);
         }
     }
 
@@ -148,29 +232,6 @@ public class FowlForgeBlockEntity extends BlockEntity implements Inventory, Exte
     }
 
     @Override
-    public ItemStack removeStack(int slot, int amount) {
-        ItemStack ret = Inventories.splitStack(items, slot, amount);
-        if (!ret.isEmpty()) markDirty();
-        return ret;
-    }
-
-    @Override
-    public ItemStack removeStack(int slot) {
-        ItemStack ret = Inventories.removeStack(items, slot);
-        if (!ret.isEmpty()) markDirty();
-        return ret;
-    }
-
-    @Override
-    public void setStack(int slot, ItemStack stack) {
-        items.set(slot, stack);
-        if (stack.getCount() > getMaxCountPerStack()) {
-            stack.setCount(getMaxCountPerStack());
-        }
-        markDirty();
-    }
-
-    @Override
     public boolean canPlayerUse(PlayerEntity player) {
         return pos.isWithinDistance(player.getPos(), 5.0);
     }
@@ -178,6 +239,7 @@ public class FowlForgeBlockEntity extends BlockEntity implements Inventory, Exte
     @Override
     public void clear() {
         items.clear();
+        currentRecipe = Optional.empty();
         markDirty();
     }
 

@@ -1,0 +1,16 @@
+{
+  "type": "techreborn:grinder",
+  "power": 10,
+  "time": 100,
+  "ingredients": [
+    {
+      "item": "hellfiremadeit:carbon_plate"
+    }
+  ],
+  "results": [
+    {
+      "item": "hellfiremadeit:carbon_dust",
+      "count": 8
+    }
+  ]
+}

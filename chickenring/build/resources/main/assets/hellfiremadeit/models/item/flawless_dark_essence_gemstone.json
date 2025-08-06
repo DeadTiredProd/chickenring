@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "hellfiremadeit:item/flawless_dark_essence_gemstone"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AIA",
+    "ARA",
+    "AIA"
+  ],
+  "key": {
+    "R": { "item": "minecraft:chicken" },
+    "A": { "item": "minecraft:air" },
+    "I": { "item": "minecraft:iron_ingot" }
+  },
+  "result": {
+    "item": "hellfiremadeit:raw_chicken_ingot",
+    "count": 1
+  }
+}

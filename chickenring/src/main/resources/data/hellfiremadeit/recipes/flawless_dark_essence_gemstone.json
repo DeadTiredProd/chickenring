@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "hellfiremadeit:fractured_dark_essence_gemstone" },
+    { "item": "create:sand_paper"}
+  ],
+  "result": {
+    "item": "hellfiremadeit:flawless_dark_essence_gemstone",
+    "count": 1
+  }
+}
