@@ -3,8 +3,29 @@
 # Items - V1.0.24
 below is a list of all items.
 
+# Raw Chicken Ingot
+<img width="55" height="52" alt="raw_chicken_ingot_preview" src="https://github.com/user-attachments/assets/1b68d51a-ff3f-4a9d-b4cc-0b98300e33f9" />
+
+# Cooked Chicken Ingot
+<img width="56" height="53" alt="cooked_chicken_ingot_preview" src="https://github.com/user-attachments/assets/40c029fb-611f-4fe8-8f84-44bd85413783" />
+
+# Rotting Chicken Ingot
+<img width="55" height="53" alt="rotting_chicken_ingot_preview" src="https://github.com/user-attachments/assets/bebc9b64-68a9-4f89-a074-24a70f70111b" />
+
 # Dark Chicken Essence Ingot
 <img width="54" height="54" alt="dark_chicken_essence_ingot_preview" src="https://github.com/user-attachments/assets/39023ba0-5a02-4478-ba8e-8fb0dada3a51" />
+
+# Fractured Dark Essence Gemstone
+<img width="54" height="54" alt="fractured_dark_essence_gemstone_preview" src="https://github.com/user-attachments/assets/9c821ac2-9d9a-45e7-9f92-92667bfd6f55" />
+
+# Flawless Dark Essence Gemstone
+<img width="54" height="50" alt="flawless_dark_essence_gemstone_preview" src="https://github.com/user-attachments/assets/8748c600-7654-40c6-867c-5319e43e9fbf" />
+
+# Carbon Plate
+<img width="53" height="53" alt="carbon_plate_preview" src="https://github.com/user-attachments/assets/84b20f45-4718-4c08-9756-b26a97ed8aa9" />
+
+# Dark Carbon Plate
+<img width="52" height="54" alt="dark_carbon_plate_preview" src="https://github.com/user-attachments/assets/46a79ed4-c666-45fa-b5d1-8e810f656bfc" />
 
 
 # Items 
