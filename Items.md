@@ -1,5 +1,11 @@
+
+
 # Items - V1.0.24
 below is a list of all items.
+
+# Dark Chicken Essence Ingot
+<img width="54" height="54" alt="dark_chicken_essence_ingot_preview" src="https://github.com/user-attachments/assets/39023ba0-5a02-4478-ba8e-8fb0dada3a51" />
+
 
 # Items 
 
