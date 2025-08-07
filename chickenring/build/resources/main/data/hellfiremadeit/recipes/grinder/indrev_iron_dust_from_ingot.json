@@ -1,0 +1,16 @@
+{
+  "type": "techreborn:grinder",
+  "power": 100,
+  "time": 150,
+  "ingredients": [
+    {
+      "item": "minecraft:iron_ingot"
+    }
+  ],
+  "results": [
+    {
+      "item": "hellfiremadeit:small_pile_iron_dust",
+      "count": 7
+    }
+  ]
+}

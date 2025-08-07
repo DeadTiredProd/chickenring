@@ -1,13 +1,12 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "AIA",
-    "ARA",
-    "AIA"
+    "I",
+    "C",
+    "I"
   ],
   "key": {
-    "R": { "item": "minecraft:chicken" },
-    "A": { "item": "minecraft:air" },
+    "C": { "item": "minecraft:chicken" },
     "I": { "item": "minecraft:iron_ingot" }
   },
   "result": {

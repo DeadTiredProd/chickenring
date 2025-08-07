@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "hellfiremadeit:small_pile_iron_dust" },
+    { "item": "hellfiremadeit:small_pile_iron_dust" },
+    { "item": "hellfiremadeit:small_pile_iron_dust" },
+    { "item": "hellfiremadeit:small_pile_iron_dust" },
+    { "item": "hellfiremadeit:small_pile_iron_dust" },
+    { "item": "hellfiremadeit:small_pile_iron_dust" },
+    { "item": "hellfiremadeit:small_pile_iron_dust" },
+    { "item": "hellfiremadeit:small_pile_iron_dust" },
+    { "item": "hellfiremadeit:small_pile_iron_dust" }
+  ],
+  "result": {
+    "item": "indrev:iron_dust",
+    "count": 1
+  }
+}

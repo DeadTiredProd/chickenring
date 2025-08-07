@@ -6,10 +6,9 @@
     "CCC"
   ],
   "key": {
-    "C": { "item": "hellfiremadeit:carbon_dust" }
+    "C": { "item": "minecraft:cooked_chicken" }
   },
   "result": {
-    "item": "hellfiremadeit:carbon_plate",
-    "count": 4
+    "item": "hellfiremadeit:cooked_chicken_block"
   }
 }
