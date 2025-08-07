@@ -1,5 +1,4 @@
 package com.example.chickenring;
-
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandler;
@@ -41,9 +40,11 @@ public class ChickenRingMod implements ModInitializer {
     public static final RecipeSerializer<FowlForgeRecipe> FOWL_FORGE_RECIPE_SERIALIZER =
         new FowlForgeRecipeSerializer();
 
-    public static final SoundEvent FOWL_FORGE_AMBIENT = new SoundEvent(new Identifier(MOD_ID, "fowl_forge_ambient0"));
+    public static final SoundEvent FOWL_FORGE_AMBIENT0 = new SoundEvent(new Identifier(MOD_ID, "fowl_forge_ambient0"));
+    public static final SoundEvent FOWL_FORGE_AMBIENT1 = new SoundEvent(new Identifier(MOD_ID, "fowl_forge_ambient1"));
+    public static final SoundEvent FOWL_FORGE_AMBIENT2 = new SoundEvent(new Identifier(MOD_ID, "fowl_forge_ambient2"));
 
-
+    
     // --------------------
     // Custom Items
     // --------------------
@@ -143,8 +144,11 @@ public class ChickenRingMod implements ModInitializer {
 
         System.out.println("ChickenRingMod: Initializing...");
         
-        Registry.register(Registry.SOUND_EVENT, new Identifier(MOD_ID, "fowl_forge_ambient0"), FOWL_FORGE_AMBIENT);
-        System.out.println("ChickenRingMod: Registered sound event for Fowl Forge ambient sound");
+        // Register sound events
+        Registry.register(Registry.SOUND_EVENT, new Identifier(MOD_ID, "fowl_forge_ambient0"), FOWL_FORGE_AMBIENT0);
+        Registry.register(Registry.SOUND_EVENT, new Identifier(MOD_ID, "fowl_forge_ambient1"), FOWL_FORGE_AMBIENT1);
+        Registry.register(Registry.SOUND_EVENT, new Identifier(MOD_ID, "fowl_forge_ambient2"), FOWL_FORGE_AMBIENT2);
+        System.out.println("ChickenRingMod: Registered Fowl Forge ambient sound events");
 
         // Register Fowl Forge block + item
         FOWL_FORGE_BLOCK = Registry.register(
@@ -181,12 +185,13 @@ public class ChickenRingMod implements ModInitializer {
             }
         );
         FOWL_FORGE_SCREEN_HANDLER = localScreenHandler;
-        
+                
         // Register recipe serializer
         Registry.register(Registry.RECIPE_SERIALIZER,
             new Identifier(MOD_ID, "fowl_forge"),
             FOWL_FORGE_RECIPE_SERIALIZER);
-
+        
+        
     
             // Register other blocks/items
         registerBlockWithItem("chicken_egg_crate", CHICKEN_EGG_CRATE, ItemGroup.FOOD);

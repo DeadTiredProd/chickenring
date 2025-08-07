@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "hellfiremadeit:dark_chicken_essence_bucket"
+    },
+    "title": {
+      "translate": "advancements.hellfiremadeit.max_fowl_forge_capacity.title"
+    },
+    "description": {
+      "translate": "advancements.hellfiremadeit.max_fowl_forge_capacity.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "trigger_on_max": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    ["trigger_on_max"]
+  ],
+  "rewards": {
+    "experience": 150
+  }
+}

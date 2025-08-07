@@ -1,5 +1,7 @@
 package com.example.chickenring;
 
+import net.minecraft.advancement.Advancement;
+import net.minecraft.advancement.AdvancementProgress;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -13,36 +15,56 @@ import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.ScreenHandlerContext;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.server.network.ServerPlayerEntity;
+
 import java.util.Optional;
+import java.util.List;
+import net.minecraft.sound.SoundEvent;
+import net.minecraft.util.math.random.Random;
 
 public class FowlForgeBlockEntity extends BlockEntity implements Inventory, ExtendedScreenHandlerFactory {
     public static final long CAPACITY_MB = 12000; // 12,000 mB = 12 L
     private long storedEssence = 0;
     private int soundTimer = 0;
-    private static final int SOUND_INTERVAL = 6000; // Play sound every 5 minutes (6000 ticks = 300 seconds)
+    private boolean wasFullLastTick = false;
+
+    private static final int SOUND_INTERVAL = 1200; // Play sound every 5 minutes (6000 ticks = 300 seconds)
     // 11-slot inventory: 0=fluid, 1–9=inputs, 10=output
     private final DefaultedList<ItemStack> items = DefaultedList.ofSize(11, ItemStack.EMPTY);
     private Optional<FowlForgeRecipe> currentRecipe = Optional.empty();
+    private static final SoundEvent[] AMBIENT_SOUNDS = {
+            ChickenRingMod.FOWL_FORGE_AMBIENT0,
+            ChickenRingMod.FOWL_FORGE_AMBIENT1,
+            ChickenRingMod.FOWL_FORGE_AMBIENT2
+    };
 
     private final PropertyDelegate delegate = new PropertyDelegate() {
         @Override
         public int get(int index) {
-            if (index == 0) return (int) (storedEssence >> 32); // High bits
-            if (index == 1) return (int) storedEssence; // Low bits
-            if (index == 2) return (int) (CAPACITY_MB >> 32); // High bits
-            if (index == 3) return (int) CAPACITY_MB; // Low bits
+            if (index == 0)
+                return (int) (storedEssence >> 32); // High bits
+            if (index == 1)
+                return (int) storedEssence; // Low bits
+            if (index == 2)
+                return (int) (CAPACITY_MB >> 32); // High bits
+            if (index == 3)
+                return (int) CAPACITY_MB; // Low bits
             return 0;
         }
+
         @Override
         public void set(int index, int value) {
-            if (index == 0) storedEssence = ((long) value << 32) | (storedEssence & 0xFFFFFFFFL);
-            if (index == 1) storedEssence = (storedEssence & 0xFFFFFFFF00000000L) | (value & 0xFFFFFFFFL);
+            if (index == 0)
+                storedEssence = ((long) value << 32) | (storedEssence & 0xFFFFFFFFL);
+            if (index == 1)
+                storedEssence = (storedEssence & 0xFFFFFFFF00000000L) | (value & 0xFFFFFFFFL);
         }
+
         @Override
         public int size() {
             return 4;
@@ -56,12 +78,46 @@ public class FowlForgeBlockEntity extends BlockEntity implements Inventory, Exte
 
     public static void tick(World world, BlockPos pos, BlockState state, FowlForgeBlockEntity be) {
         if (!world.isClient) {
-            // Play ambient sound if essence > 1000 mB
+            boolean isFullNow = be.storedEssence >= CAPACITY_MB;
+
+            if (isFullNow && !be.wasFullLastTick) {
+                // Just reached max capacity, grant advancement to nearby players
+                List<ServerPlayerEntity> nearbyPlayers = world.getPlayers()
+                        .stream()
+                        .filter(player -> player instanceof ServerPlayerEntity
+                                && pos.isWithinDistance(player.getPos(), 5.0))
+                        .map(player -> (ServerPlayerEntity) player)
+                        .toList();
+
+                for (ServerPlayerEntity player : nearbyPlayers) {
+                    Advancement advancement = player.getServer()
+                            .getAdvancementLoader()
+                            .get(new Identifier("hellfiremadeit", "max_fowl_forge_capacity"));
+
+                    if (advancement != null) {
+                        AdvancementProgress progress = player.getAdvancementTracker().getProgress(advancement);
+                        if (!progress.isDone()) {
+                            player.getAdvancementTracker().grantCriterion(advancement, "trigger_on_max");
+                            System.out.println("FowlForge: Granted max capacity advancement to "
+                                    + player.getName().getString() + " at " + pos);
+                        }
+                    }
+                }
+                be.wasFullLastTick = true; // Mark that advancement was granted this tick
+            } else if (!isFullNow) {
+                // Reset flag to allow granting advancement next time it fills
+                be.wasFullLastTick = false;
+            }
+
+            // Ambient sound logic
             if (be.storedEssence > 1000) {
                 be.soundTimer++;
                 if (be.soundTimer >= SOUND_INTERVAL) {
-                    System.out.println("FowlForge: Playing ambient sound at " + pos + ", essence: " + be.storedEssence);
-                    world.playSound(null, pos, ChickenRingMod.FOWL_FORGE_AMBIENT, SoundCategory.BLOCKS, 0.5f, 1.0f);
+                    Random random = world.getRandom();
+                    SoundEvent sound = AMBIENT_SOUNDS[random.nextInt(AMBIENT_SOUNDS.length)];
+                    System.out.println("FowlForge: Playing ambient sound " + sound.getId() + " at " + pos
+                            + ", essence: " + be.storedEssence);
+                    world.playSound(null, pos, sound, SoundCategory.BLOCKS, 0.5f, 0.8f + random.nextFloat() * 0.4f);
                     be.soundTimer = 0;
                 }
             } else {
@@ -76,8 +132,10 @@ public class FowlForgeBlockEntity extends BlockEntity implements Inventory, Exte
     private void handleCrafting() {
         if (items.get(10).isEmpty()) { // Only check for recipe if output slot is empty
             Optional<FowlForgeRecipe> recipe = world.getRecipeManager()
-                .getFirstMatch(ChickenRingMod.FOWL_FORGE_RECIPE_TYPE, this, world);
-            if (recipe.isPresent() && storedEssence >= recipe.get().getEssenceCost()) {
+                    .getFirstMatch(ChickenRingMod.FOWL_FORGE_RECIPE_TYPE, this, world);
+            if (recipe.isEmpty() || storedEssence < recipe.get().getEssenceCost()) {
+                currentRecipe = Optional.empty();
+            } else {
                 currentRecipe = recipe;
                 items.set(10, recipe.get().craft(this));
                 System.out.println("FowlForge: Previewing recipe output: " + recipe.get().getId());
@@ -85,8 +143,6 @@ public class FowlForgeBlockEntity extends BlockEntity implements Inventory, Exte
                 if (world != null) {
                     world.updateListeners(pos, getCachedState(), getCachedState(), 3);
                 }
-            } else {
-                currentRecipe = Optional.empty();
             }
         } else if (!items.get(10).isEmpty() && currentRecipe.isEmpty()) {
             // Clear output if no valid recipe matches (e.g., ingredients changed)
@@ -110,7 +166,8 @@ public class FowlForgeBlockEntity extends BlockEntity implements Inventory, Exte
             }
             // Consume essence
             storedEssence -= currentRecipe.get().getEssenceCost();
-            System.out.println("FowlForge: Consumed ingredients and " + currentRecipe.get().getEssenceCost() + " mB essence");
+            System.out.println(
+                    "FowlForge: Consumed ingredients and " + currentRecipe.get().getEssenceCost() + " mB essence");
             currentRecipe = Optional.empty();
             markDirty();
             if (world != null) {
@@ -256,4 +313,6 @@ public class FowlForgeBlockEntity extends BlockEntity implements Inventory, Exte
         tag.putLong("Essence", storedEssence);
         Inventories.writeNbt(tag, items);
     }
+
+    
 }

@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:cooked_chicken"
+    },
+    "title": {
+      "translate": "advancements.hellfiremadeit.cook_frozen_chicken.title"
+    },
+    "description": {
+      "translate": "advancements.hellfiremadeit.cook_frozen_chicken.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "cook_frozen_chicken": {
+      "trigger": "minecraft:player_smelted_item",
+      "conditions": {
+        "item": {
+          "items": ["hellfiremadeit:frozen_cooked_chicken"]
+        }
+      }
+    }
+  },
+  "requirements": [
+    ["cook_frozen_chicken"]
+  ],
+  "rewards": {
+    "experience": 50
+  }
+}

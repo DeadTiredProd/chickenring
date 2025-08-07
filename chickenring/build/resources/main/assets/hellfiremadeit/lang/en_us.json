@@ -37,5 +37,20 @@
   "block.hellfiremadeit.fowl_forge":                "Fowl Forge",
   "item.hellfiremadeit.chicken_egg_carton":          "Chicken Egg Carton",
   "block.hellfiremadeit.chicken_egg_crate":          "Chicken Egg Crate",
-  "item.hellfiremadeit.chicken_egg_crate":          "Chicken Egg Crate"
+  "item.hellfiremadeit.chicken_egg_crate":          "Chicken Egg Crate",
+
+  "advancements.hellfiremadeit.obtain_burnt_chicken.title": "Charred Feast",
+  "advancements.hellfiremadeit.obtain_burnt_chicken.description": "Obtain a Burnt Chicken.",
+
+  "advancements.hellfiremadeit.obtain_chicken_dust.title": "Powdered Poultry",
+  "advancements.hellfiremadeit.obtain_chicken_dust.description": "Obtain Chicken Dust to harness its feathery essence.",
+
+  
+  "advancements.hellfiremadeit.max_fowl_forge_capacity.title": "Essence Overflow",
+  "advancements.hellfiremadeit.max_fowl_forge_capacity.description": "Fill the Fowl Forge to its maximum capacity.",
+
+  "advancements.hellfiremadeit.cook_frozen_chicken.title": "Still Cold in the Middle",
+  "advancements.hellfiremadeit.cook_frozen_chicken.description": "Thaw Frozen Raw Chicken and cook it, only to find it’s still chilly!"
+
+
 }
