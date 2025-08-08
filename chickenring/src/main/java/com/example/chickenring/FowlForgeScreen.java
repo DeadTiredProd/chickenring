@@ -73,11 +73,12 @@ public class FowlForgeScreen extends HandledScreen<FowlForgeScreenHandler> {
 
         // Check if mouse is over fluid bar
         if (mouseX >= guiLeft + FB_X && mouseX < guiLeft + FB_X + FB_WIDTH &&
-            mouseY >= guiTop + FB_Y_TOP && mouseY < guiTop + FB_Y_TOP + FB_HEIGHT) {
+                mouseY >= guiTop + FB_Y_TOP && mouseY < guiTop + FB_Y_TOP + FB_HEIGHT) {
             long storedEssence = this.handler.getBlockEntity().getStoredEssence();
             long capacity = FowlForgeBlockEntity.CAPACITY_MB;
             Text tooltip = Text.literal(storedEssence + " / " + capacity + " mB Dark Chicken Essence");
             this.renderTooltip(matrices, tooltip, mouseX, mouseY);
         }
     }
+
 }

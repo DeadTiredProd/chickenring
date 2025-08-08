@@ -4,16 +4,17 @@
       "item": "minecraft:cooked_chicken"
     },
     "title": {
-      "translate": "advancements.hellfiremadeit.cook_frozen_chicken.title"
+      "translate": "advancements.hellfiremadeit.reheat_chicken.title"
     },
     "description": {
-      "translate": "advancements.hellfiremadeit.cook_frozen_chicken.description"
+      "translate": "advancements.hellfiremadeit.reheat_chicken.description"
     },
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
+  "parent": "hellfiremadeit:find_frozen_raw_chicken",
   "criteria": {
     "cook_frozen_chicken": {
       "trigger": "minecraft:player_smelted_item",
@@ -25,7 +26,7 @@
     }
   },
   "requirements": [
-    ["cook_frozen_chicken"]
+    ["find_frozen_raw_chicken"]
   ],
   "rewards": {
     "experience": 50

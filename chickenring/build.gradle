@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'com.example.chickenring'
-version = '1.0.26'
+version = '1.0.27'
 
 java {
     withSourcesJar()
@@ -14,7 +14,18 @@ sourceCompatibility = JavaVersion.VERSION_17
 targetCompatibility = JavaVersion.VERSION_17
 
 repositories {
+    
+
+    maven {
+        name = "BlameJared"
+        url = "https://maven.blamejared.com"
+    }
+
+    maven {url = "https://maven.shedaniel.me/"}
+
     mavenCentral()
+    mavenLocal()
+
     maven { url = "https://maven.fabricmc.net/" }
 }
 
@@ -23,6 +34,8 @@ dependencies {
     mappings "net.fabricmc:yarn:1.19.2+build.28:v2"
     modImplementation "net.fabricmc:fabric-loader:0.14.11"
     modImplementation "net.fabricmc.fabric-api:fabric-api:0.77.0+1.19.2"
+    modImplementation "vazkii.patchouli:Patchouli:1.19.2-76-FABRIC"
+
 }
 
 

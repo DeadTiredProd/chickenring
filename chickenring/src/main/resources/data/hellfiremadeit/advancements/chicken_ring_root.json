@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "hellfiremadeit:peckronomicon"
+    },
+    "title": "Chicken Adventures",
+    "description": "The Fowl Forge grows hungry!",
+    "background": "minecraft:textures/gui/advancements/backgrounds/nether.png",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_book": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["hellfiremadeit:peckronomicon"]
+          }
+        ]
+      }
+    }
+  }
+}

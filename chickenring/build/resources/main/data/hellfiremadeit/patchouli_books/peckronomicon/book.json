@@ -1,0 +1,11 @@
+{
+  "name": "item.hellfiremadeit.peckronomicon",
+  "landing_text": "hellfiremadeit.peckronomicon.landing",
+  "version": "1.0.27",
+  "book_texture": "hellfiremadeit:textures/gui/peckronomicon.png",
+  "model": "hellfiremadeit:peckronomicon",
+  "dont_generate_book": true,
+  "custom_book_item": "hellfiremadeit:peckronomicon",
+  "i18n": true,
+  "use_resource_pack": true
+}

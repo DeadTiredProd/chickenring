@@ -1,0 +1,12 @@
+{
+  "name": "hellfiremadeit.entry.welcome",
+  "category": "hellfiremadeit:getting_started",
+  "icon": "hellfiremadeit:peckronomicon",
+  "priority": true,
+  "sortnum": -10,
+  "pages": [
+    {
+      "type": "text",
+      "text": "hellfiremadeit.page.welcome0"
+    }]
+}

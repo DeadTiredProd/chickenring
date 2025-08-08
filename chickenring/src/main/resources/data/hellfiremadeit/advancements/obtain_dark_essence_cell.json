@@ -1,33 +1,33 @@
 {
   "display": {
     "icon": {
-      "item": "hellfiremadeit:burnt_chicken"
+      "item": "hellfiremadeit:dark_chicken_essence_cell"
     },
     "title": {
-      "translate": "advancements.hellfiremadeit.obtain_burnt_chicken.title"
+      "translate": "advancements.hellfiremadeit.obtain_dark_essence_cell.title"
     },
     "description": {
-      "translate": "advancements.hellfiremadeit.obtain_burnt_chicken.description"
+      "translate": "advancements.hellfiremadeit.obtain_dark_essence_cell.description"
     },
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "hellfiremadeit:reheat_chicken",
+  "parent": "hellfiremadeit:obtain_chicken_dust",
   "criteria": {
     "obtain_burnt_chicken": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": ["hellfiremadeit:burnt_chicken"]
+            "items": ["hellfiremadeit:dark_chicken_essence_cell"]
           }
         ]
       }
     }
   },
   "requirements": [
-    ["reheat_chicken"]
+    ["obtain_chicken_dust"]
   ]
 }

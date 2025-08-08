@@ -1,0 +1,11 @@
+{
+  "name": "hellfiremadeit.entry.peckronomicon",
+  "category": "hellfiremadeit:getting_started",
+  "icon": "hellfiremadeit:peckronomicon",
+  "priority": true,
+  "pages": [
+    {
+      "type": "text",
+      "text": "hellfiremadeit.page.peckronomicon0"
+    }]
+}

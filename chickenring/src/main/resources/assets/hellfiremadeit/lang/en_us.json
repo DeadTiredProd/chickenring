@@ -1,4 +1,5 @@
 {
+  "hellfiremadeit.modVersion": "1.0.27",
   "item.hellfiremadeit.chicken_ring":                "Chicken Ring",
   "item.hellfiremadeit.rotting_chicken":             "Rotting Chicken",
   "item.hellfiremadeit.frozen_rotting_chicken":      "Frozen Rotting Chicken",
@@ -39,18 +40,39 @@
   "block.hellfiremadeit.chicken_egg_crate":          "Chicken Egg Crate",
   "item.hellfiremadeit.chicken_egg_crate":          "Chicken Egg Crate",
 
+  
+  "advacements.hellfiremadeit.chicken_ring_root.title": "Chicken Ring",
+  "advacements.hellfiremadeit.chicken_ring_root.description": "The beginning",
+
+  "advancements.hellfiremadeit.find_frozen_raw_chicken.title": "Frozen Feast",
+  "advancements.hellfiremadeit.find_frozen_raw_chicken.description": "Find Frozen Raw Chicken.",
+
+  "advancements.hellfiremadeit.reheat_chicken.title": "Still Cold in the Middle",
+  "advancements.hellfiremadeit.reheat_chicken.description": "Reheat Frozen Cooked Chicken!",
+
   "advancements.hellfiremadeit.obtain_burnt_chicken.title": "Charred Feast",
   "advancements.hellfiremadeit.obtain_burnt_chicken.description": "Obtain a Burnt Chicken.",
 
   "advancements.hellfiremadeit.obtain_chicken_dust.title": "Powdered Poultry",
   "advancements.hellfiremadeit.obtain_chicken_dust.description": "Obtain Chicken Dust to harness its feathery essence.",
 
-  
+  "advancements.hellfiremadeit.obtain_dark_essence_cell.title": "Essence of Darkness",
+  "advancements.hellfiremadeit.obtain_dark_essence_cell.description": "Obtain a Dark Chicken Essence Cell to store the essence of burnt chickens.",
+
+  "advancements.hellfiremadeit.obtain_fowl_forge.title": "Fowl Forge Acquired",
+  "advancements.hellfiremadeit.obtain_fowl_forge.description": "Obtain a Fowl Forge to smelt and forge with the essence of chickens.",
+
   "advancements.hellfiremadeit.max_fowl_forge_capacity.title": "Essence Overflow",
   "advancements.hellfiremadeit.max_fowl_forge_capacity.description": "Fill the Fowl Forge to its maximum capacity.",
+  
 
-  "advancements.hellfiremadeit.cook_frozen_chicken.title": "Still Cold in the Middle",
-  "advancements.hellfiremadeit.cook_frozen_chicken.description": "Thaw Frozen Raw Chicken and cook it, only to find it’s still chilly!"
+  "item.hellfiremadeit.peckronomicon": "Peckronomicon",
+    
+  "hellfiremadeit.entry.welcome": "Welcome To Chicken Ring",
+  "hellfiremadeit.landing": "Chicken Ring. A mod about chicken rings and things and everything in between. Explore the feathery depths of this mod and discover its secrets.",
+  "hellfiremadeit.description": "Magic, Tech. Naturally",
 
-
+  "hellfiremadeit.page.welcome0": "$(o)Welcome to Chicken Ring! I congratulate you on the fine decision to combine a chicken and a book together. Or just on finding this tome in a chest. Whichever applies.$(p)$(o)You can navigate this book with the arrows at the bottom of this page, or scroll through pages with your mouse wheel.",
+  "hellfiremadeit.entry.peckronomicon": "Peckronomicon - The Fowl Book",
+  "hellfiremadeit.page.peckronomicon0": "The $(item)Peckronomicon$(0) is the repository of all knowledge for all fowl matters. (But you probably knew that already.)$(p)All well-known fowl knowledge is stored within these pages. For convenience, if a block happens to have an entry in here, it can be sneak-right clicked on with the $(item)peckronomicon$(0) to open said entry."
 }

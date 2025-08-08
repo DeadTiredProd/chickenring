@@ -20,9 +20,9 @@
     }
   },
   "requirements": [
-    ["trigger_on_max"]
+    ["trigger_on_max", "obtain_fowl_forge", "obtain_dark_essence_cell", "obtain_chicken_dust", "obtain_burnt_chicken","find_frozen_raw_chicken", "reheat_chicken"]
   ],
   "rewards": {
-    "experience": 150
+    "experience": 500
   }
 }

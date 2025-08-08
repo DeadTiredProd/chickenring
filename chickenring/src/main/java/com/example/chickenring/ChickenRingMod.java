@@ -19,6 +19,7 @@ import net.minecraft.item.BucketItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Items;
+import net.minecraft.item.WrittenBookItem;
 import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.RecipeType;
 import net.minecraft.screen.ScreenHandlerContext;
@@ -76,6 +77,7 @@ public class ChickenRingMod implements ModInitializer {
         .fireproof()
     );
 
+    public static final Item peckrONOMICON = new WrittenBookItem(new Item.Settings().maxCount(1).group(ItemGroup.MISC));
     public static final Item ROTTING_CHICKEN = new Item(new Item.Settings()
         .group(ItemGroup.FOOD)
         .food(ModFoodComponents.ROTTING_CHICKEN_FOOD)
@@ -143,7 +145,8 @@ public class ChickenRingMod implements ModInitializer {
     public void onInitialize() {
 
         System.out.println("ChickenRingMod: Initializing...");
-        
+        Registry.register(Registry.ITEM, new Identifier("hellfiremadeit", "peckronomicon"), peckrONOMICON);
+        PlayerJoinHandler.register();
         // Register sound events
         Registry.register(Registry.SOUND_EVENT, new Identifier(MOD_ID, "fowl_forge_ambient0"), FOWL_FORGE_AMBIENT0);
         Registry.register(Registry.SOUND_EVENT, new Identifier(MOD_ID, "fowl_forge_ambient1"), FOWL_FORGE_AMBIENT1);
@@ -222,7 +225,6 @@ public class ChickenRingMod implements ModInitializer {
         registerItem("frozen_rotting_chicken", FROZEN_ROTTING_CHICKEN);
         registerItem("frozen_raw_chicken", FROZEN_RAW_CHICKEN);
         registerItem("frozen_cooked_chicken", FROZEN_COOKED_CHICKEN);
-
         // Fluids + Bucket
         DARK_CHICKEN_ESSENCE_STILL = Registry.register(
             Registry.FLUID,
