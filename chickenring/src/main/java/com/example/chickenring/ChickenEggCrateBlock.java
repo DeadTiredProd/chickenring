@@ -33,11 +33,11 @@ public class ChickenEggCrateBlock extends FallingBlock {
             // Remove the crate block without dropping its item
             world.breakBlock(pos, false);
 
-            // Spawn 1–3 baby chickens
+            // Spawn 1–3 baby chonkens
             int count = 1 + random.nextInt(3);
             for (int i = 0; i < count; i++) {
                 ChickenEntity chick = new ChickenEntity(EntityType.CHICKEN, world);
-                chick.setBreedingAge(-24000);  // mark as baby
+                chick.setBreedingAge(-24000); // mark as baby
                 chick.refreshPositionAndAngles(
                     pos.getX() + 0.5, 
                     pos.getY(), 

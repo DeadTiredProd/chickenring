@@ -140,6 +140,7 @@ public class ChickenRingMod implements ModInitializer {
         FabricBlockSettings.of(Material.ICE)
             .strength(0.5f)
             .ticksRandomly()
+            
     );
 
 
