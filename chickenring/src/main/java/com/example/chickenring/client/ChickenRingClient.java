@@ -1,7 +1,8 @@
 package com.example.chickenring.client;
-
 import com.example.chickenring.ChickenRingMod;
 import com.example.chickenring.FowlForgeScreen;
+import com.example.chickenring.client.model.ChonkenModel;
+import com.example.chickenring.client.render.ChonkenRenderer;
 import com.example.chickenring.FowlForgeBlockEntityRenderer;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
@@ -9,6 +10,8 @@ import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.MinecraftClient;
 import net.fabricmc.fabric.api.client.screenhandler.v1.ScreenRegistry;
 import net.minecraft.client.option.KeyBinding;
@@ -20,6 +23,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import org.lwjgl.glfw.GLFW;
 
+
 public class ChickenRingClient implements ClientModInitializer {
 
     private static KeyBinding flyToggleKey;
@@ -30,6 +34,9 @@ public class ChickenRingClient implements ClientModInitializer {
     @SuppressWarnings("deprecation")
     @Override
     public void onInitializeClient() {
+
+        EntityRendererRegistry.register(ChickenRingMod.CHONKEN, ChonkenRenderer::new);
+        EntityModelLayerRegistry.registerModelLayer(ChonkenModel.LAYER_LOCATION, ChonkenModel::getTexturedModelData);
 
         BlockEntityRendererFactories.register(ChickenRingMod.FOWL_FORGE_BLOCK_ENTITY, FowlForgeBlockEntityRenderer::new);
         // Register the fluid render handler (uses vanilla water textures + tint)

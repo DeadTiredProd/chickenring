@@ -1,0 +1,12 @@
+{
+  "name": "hellfiremadeit.entry.the_basics",
+  "category": "hellfiremadeit:getting_started",
+  "icon": "hellfiremadeit:frozen_raw_chicken",
+  "priority": true,
+  "pages": [
+    {
+      "type": "text",
+      "text": "hellfiremadeit.page.basics0"
+    } 
+    ]
+}

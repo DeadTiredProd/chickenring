@@ -28,7 +28,7 @@
   "item.hellfiremadeit.frozen_raw_chicken_block":    "Frozen Raw Chicken Block",
   "item.hellfiremadeit.frozen_cooked_chicken_block": "Frozen Cooked Chicken Block",
   "item.hellfiremadeit.frozen_rotting_chicken_block": "Frozen Rotting Chicken Block",
-
+  "entity.hellfiremadeit.chonken": "Chonken",
   "block.hellfiremadeit.raw_chicken_block":          "Raw Chicken Block",
   "block.hellfiremadeit.cooked_chicken_block":       "Cooked Chicken Block",
   "block.hellfiremadeit.rotting_chicken_block":      "Rotting Chicken Block",
@@ -69,10 +69,16 @@
   "item.hellfiremadeit.peckronomicon": "Peckronomicon",
     
   "hellfiremadeit.entry.welcome": "Welcome To Chicken Ring",
-  "hellfiremadeit.landing": "Chicken Ring. A mod about chicken rings and things and everything in between. Explore the feathery depths of this mod and discover its secrets.",
-  "hellfiremadeit.description": "Magic, Tech. Naturally",
+  "hellfiremadeit.landing": "$(item)Chicken Ring$(0) A mod about chicken rings and things and everything in between. Explore the feathery depths of this mod and discover its secrets.",
+  "hellfiremadeit.githublink": "https://github.com/DeadTiredProd/chickenring/tree/main",
 
-  "hellfiremadeit.page.welcome0": "$(o)Welcome to Chicken Ring! I congratulate you on the fine decision to combine a chicken and a book together. Or just on finding this tome in a chest. Whichever applies.$(p)$(o)You can navigate this book with the arrows at the bottom of this page, or scroll through pages with your mouse wheel.",
-  "hellfiremadeit.entry.peckronomicon": "Peckronomicon - The Fowl Book",
-  "hellfiremadeit.page.peckronomicon0": "The $(item)Peckronomicon$(0) is the repository of all knowledge for all fowl matters. (But you probably knew that already.)$(p)All well-known fowl knowledge is stored within these pages. For convenience, if a block happens to have an entry in here, it can be sneak-right clicked on with the $(item)peckronomicon$(0) to open said entry."
+  "hellfiremadeit.page.welcome0": "$(item)Welcome to Chicken Ring!$(0) I congratulate you on the fine decision to combine a $(item)chicken and a book together$(0). Or just on finding this tome in a chest. Whichever applies.$(p)$(o)You can navigate this book with the arrows at the bottom of this page, or scroll through pages with your mouse wheel.",
+  "hellfiremadeit.page.welcome1": "Any entries typed in $(o)Italics$() are $(thing)basic$(0) entries, which contain the core knowledge required to play $(thing)Chicken Ring$(0)-- you may want to read those first. Most sections contain one or more of these entries, so a good look through those would be a good idea.",
+
+  "hellfiremadeit.entry.peckronomicon": "The Fowl Book",
+  "hellfiremadeit.category.getting_started": "Getting Started",
+  "hellfiremadeit.entry.the_basics": "The Basics",
+  "hellfiremadeit.page.peckronomicon0": "The $(item)Peckronomicon$(0) is the repository of all knowledge for all fowl matters. (But you probably knew that already.)$(p)All well-known fowl knowledge is stored within these pages. For convenience, if a block happens to have an entry in here, it can be sneak-right clicked on with the $(item)peckronomicon$(0) to open said entry.",
+  "hellfiremadeit.page.basics0": "Everything in $(thing)Chicken Ring$(0) revolves around $(item)chickens$(0). You can find them in the wild, or you can create them with $(item)eggs$(0). There are many items and features that revolve around chicken and doing things with chicken that you wouldn't normally do.",
+  "hellfiremadeit.page.chickens": "Here are some of the many chicken variants of chicken you will obtain in your adventures with Chicken Ring. some of them have special properties and uses, so be sure to check out the Peckronomicon for more information on each type of chicken!"
 }

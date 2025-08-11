@@ -1,9 +1,10 @@
 {
   "name": "item.hellfiremadeit.peckronomicon",
-  "landing_text": "hellfiremadeit.peckronomicon.landing",
+  "landing_text": "hellfiremadeit.landing",
   "version": "1.0.27",
   "book_texture": "hellfiremadeit:textures/gui/peckronomicon.png",
   "model": "hellfiremadeit:peckronomicon",
+  "creative_tab": "Chicken Ring",
   "dont_generate_book": true,
   "custom_book_item": "hellfiremadeit:peckronomicon",
   "i18n": true,

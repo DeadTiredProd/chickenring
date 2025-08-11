@@ -1,4 +1,6 @@
 package com.example.chickenring;
+import com.example.chickenring.entity.ChonkenEntity;
+
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandler;
@@ -6,6 +8,8 @@ import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry
 import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.fabricmc.fabric.api.screenhandler.v1.ScreenHandlerRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -13,6 +17,9 @@ import net.minecraft.block.FluidBlock;
 import net.minecraft.block.Material;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.SpawnGroup;
+import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.BucketItem;
@@ -45,6 +52,15 @@ public class ChickenRingMod implements ModInitializer {
     public static final SoundEvent FOWL_FORGE_AMBIENT1 = new SoundEvent(new Identifier(MOD_ID, "fowl_forge_ambient1"));
     public static final SoundEvent FOWL_FORGE_AMBIENT2 = new SoundEvent(new Identifier(MOD_ID, "fowl_forge_ambient2"));
 
+
+
+    public static final EntityType<ChonkenEntity> CHONKEN = Registry.register(
+           Registry.ENTITY_TYPE,
+           new Identifier(MOD_ID, "chonken"),
+           FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, ChonkenEntity::new)
+               .dimensions(EntityType.CHICKEN.getDimensions())
+               .build()
+       );
     
     // --------------------
     // Custom Items
@@ -126,6 +142,8 @@ public class ChickenRingMod implements ModInitializer {
             .ticksRandomly()
     );
 
+
+    
     // --------------------
     // Fluids + Bucket
     // --------------------
@@ -194,7 +212,9 @@ public class ChickenRingMod implements ModInitializer {
             new Identifier(MOD_ID, "fowl_forge"),
             FOWL_FORGE_RECIPE_SERIALIZER);
         
-        
+        FabricDefaultAttributeRegistry.register(CHONKEN, ChonkenEntity.createMobAttributes()
+               .add(EntityAttributes.GENERIC_MAX_HEALTH, 10.0D)
+               .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.25D));
     
             // Register other blocks/items
         registerBlockWithItem("chicken_egg_crate", CHICKEN_EGG_CRATE, ItemGroup.FOOD);
