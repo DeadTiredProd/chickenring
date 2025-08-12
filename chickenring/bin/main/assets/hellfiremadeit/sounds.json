@@ -1,0 +1,26 @@
+{
+  "fowl_forge_ambient0": {
+    "category": "block",
+    "sounds": [
+      {
+        "name": "hellfiremadeit:fowl_forge_ambient0"
+      }
+    ]
+  },
+  "fowl_forge_ambient1": {
+    "category": "block",
+    "sounds": [
+      {
+        "name": "hellfiremadeit:fowl_forge_ambient1"
+      }
+    ]
+  },
+  "fowl_forge_ambient2": {
+    "category": "block",
+    "sounds": [
+      {
+        "name": "hellfiremadeit:fowl_forge_ambient2"
+      }
+    ]
+  }
+}

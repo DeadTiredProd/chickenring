@@ -1,0 +1,33 @@
+{
+  "type": "techreborn:centrifuge",
+  "power": 20,
+  "time": 400,
+  "ingredients": [
+    {
+      "item": "hellfiremadeit:chicken_dust",
+      "count": 16
+    },
+    {
+      "item": "techreborn:cell",
+      "count": 1
+    }
+  ],
+  "results": [
+    {
+      "item": "hellfiremadeit:carbon_dust",
+      "count": 3
+    },
+    {
+      "item": "hellfiremadeit:dark_chicken_essence_cell",
+      "count": 1
+    },
+    {
+      "item": "hellfiremadeit:calcium_dust",
+      "count": 2
+    },
+    {
+      "item": "hellfiremadeit:small_pile_iron_dust",
+      "count": 1
+    }
+  ]
+}

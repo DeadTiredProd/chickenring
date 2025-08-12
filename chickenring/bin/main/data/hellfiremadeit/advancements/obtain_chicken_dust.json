@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "hellfiremadeit:chicken_dust"
+    },
+    "title": {
+      "translate": "advancements.hellfiremadeit.obtain_chicken_dust.title"
+    },
+    "description": {
+      "translate": "advancements.hellfiremadeit.obtain_chicken_dust.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "hellfiremadeit:obtain_burnt_chicken",
+  "criteria": {
+    "obtain_chicken_dust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["hellfiremadeit:chicken_dust"]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["obtain_burnt_chicken"]
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "hellfiremadeit:block/chonken_nest" },
+    "facing=south": { "model": "hellfiremadeit:block/chonken_nest", "y": 180 },
+    "facing=west":  { "model": "hellfiremadeit:block/chonken_nest", "y": 270 },
+    "facing=east":  { "model": "hellfiremadeit:block/chonken_nest", "y": 90 }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "hellfiremadeit:fowl_forge"
+    },
+    "title": {
+      "translate": "advancements.hellfiremadeit.obtain_fowl_forge.title"
+    },
+    "description": {
+      "translate": "advancements.hellfiremadeit.obtain_fowl_forge.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "hellfiremadeit:obtain_chicken_dust",
+  "criteria": {
+    "obtain_burnt_chicken": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["hellfiremadeit:fowl_forge"]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["obtain_dark_essence_cell"]
+  ]
+}

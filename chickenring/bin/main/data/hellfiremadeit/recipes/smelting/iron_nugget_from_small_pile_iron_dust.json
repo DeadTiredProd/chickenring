@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "hellfiremadeit:small_pile_iron_dust"
+  },
+  "result": "minecraft:iron_nugget",
+  "experience": 0.15,
+  "cookingtime": 50
+}

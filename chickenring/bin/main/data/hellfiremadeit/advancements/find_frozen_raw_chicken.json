@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "hellfiremadeit:frozen_raw_chicken"
+    },
+    "title": {
+      "translate": "advancements.hellfiremadeit.find_frozen_raw_chicken.title"
+    },
+    "description": {
+      "translate": "advancements.hellfiremadeit.find_frozen_raw_chicken.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "hellfiremadeit:chicken_ring_root",
+  "criteria": {
+    "obtain_burnt_chicken": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["hellfiremadeit:frozen_raw_chicken"]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["find_frozen_raw_chicken"]
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "hellfiremadeit:burnt_chicken"
+    },
+    "title": {
+      "translate": "advancements.hellfiremadeit.obtain_burnt_chicken.title"
+    },
+    "description": {
+      "translate": "advancements.hellfiremadeit.obtain_burnt_chicken.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "hellfiremadeit:reheat_chicken",
+  "criteria": {
+    "obtain_burnt_chicken": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["hellfiremadeit:burnt_chicken"]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["reheat_chicken"]
+  ]
+}

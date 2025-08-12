@@ -1,5 +1,6 @@
 package com.example.chickenring.entity;
 import com.example.chickenring.ChickenRingMod;
+import com.example.chickenring.entity.goals.FindNestGoal;
 import com.example.chickenring.entity.goals.MoveToLightGoal;
 import com.example.chickenring.entity.goals.MoveToShelterGoal;
 
@@ -47,15 +48,16 @@ public class ChonkenEntity extends AnimalEntity {
 
     protected void initGoals() {
         this.goalSelector.add(0, new SwimGoal(this));
-        this.goalSelector.add(1, new MoveToShelterGoal(this)); // Higher priority for rain
-        this.goalSelector.add(2, new MoveToLightGoal(this)); // Higher priority for night
-        this.goalSelector.add(3, new EscapeDangerGoal(this, 1.4));
-        this.goalSelector.add(4, new AnimalMateGoal(this, 1.0));
-        this.goalSelector.add(5, new TemptGoal(this, 1.0, BREEDING_INGREDIENT, false));
-        this.goalSelector.add(6, new FollowParentGoal(this, 1.1));
-        this.goalSelector.add(7, new WanderAroundFarGoal(this, 1.0));
-        this.goalSelector.add(8, new LookAtEntityGoal(this, PlayerEntity.class, 6.0F));
-        this.goalSelector.add(9, new LookAroundGoal(this));
+        this.goalSelector.add(1, new EscapeDangerGoal(this, 1.4));
+        this.goalSelector.add(2, new AnimalMateGoal(this, 1.0));
+        this.goalSelector.add(3, new TemptGoal(this, 1.0, BREEDING_INGREDIENT, false));
+        this.goalSelector.add(4, new MoveToShelterGoal(this)); // Higher priority for rain
+        this.goalSelector.add(5, new MoveToLightGoal(this)); // Higher priority for night
+        this.goalSelector.add(6, new FindNestGoal(this, 1.0D, 25));     
+        this.goalSelector.add(7, new FollowParentGoal(this, 1.1));
+        this.goalSelector.add(8, new WanderAroundFarGoal(this, 1.0));
+        this.goalSelector.add(9, new LookAtEntityGoal(this, PlayerEntity.class, 6.0F));
+        this.goalSelector.add(10, new LookAroundGoal(this));
     }
 
     public void tickMovement() {

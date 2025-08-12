@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "III",
+    "ICI",
+    "III"
+  ],
+  "key": {
+    "I": { "item": "minecraft:ice" },
+    "C": { "item": "hellfiremadeit:cooked_chicken_block" }
+  },
+  "result": {
+    "item": "hellfiremadeit:frozen_cooked_chicken_block",
+    "count": 1
+  }
+}

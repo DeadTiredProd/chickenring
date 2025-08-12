@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "IGI",
+    "R",
+    "IGI"
+  ],
+  "key": {
+    "R": { "item": "hellfiremadeit:rotting_chicken" },
+    "I": { "item": "minecraft:ice" },
+    "G": { "item": "minecraft:gold_ingot" }
+  },
+  "result": {
+    "item": "hellfiremadeit:rotting_chicken_ingot",
+    "count": 1
+  }
+}

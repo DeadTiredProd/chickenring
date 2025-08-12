@@ -111,6 +111,11 @@ public class ChickenRingMod implements ModInitializer {
         .food(ModFoodComponents.FROZEN_RAW_CHICKEN_FOOD)
     );
 
+       public static final Block CHONKEN_NEST = new ChonkenNest(
+        FabricBlockSettings.of(Material.SPONGE)
+            .strength(0.3f)
+    );
+
     // --------------------
     // Custom Blocks
     // --------------------
@@ -225,6 +230,7 @@ public class ChickenRingMod implements ModInitializer {
         registerBlockWithItem("frozen_raw_chicken_block", FROZEN_RAW_CHICKEN_BLOCK, ItemGroup.FOOD);
         registerBlockWithItem("frozen_cooked_chicken_block", FROZEN_COOKED_CHICKEN_BLOCK, ItemGroup.FOOD);
         registerBlockWithItem("frozen_rotting_chicken_block", FROZEN_ROTTING_CHICKEN_BLOCK, ItemGroup.FOOD);
+        registerBlockWithItem("chonken_nest", CHONKEN_NEST, ItemGroup.MISC);
 
         registerItem("chicken_ring", CHICKEN_RING);
         registerItem("chicken_egg_carton", CHICKEN_EGG_CARTON);

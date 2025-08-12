@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "indrev:iron_dust"}
+    
+  ],
+  "result": {
+    "item": "hellfiremadeit:small_pile_iron_dust",
+    "count": 8
+  }
+}
