@@ -140,7 +140,7 @@ public class FindNestGoal extends Goal {
             return false;
         }
 
-        // Must have a light source within 10 blocks
+        // Must have a light source within 20 blocks
         BlockPos.Mutable searchPos = new BlockPos.Mutable();
         for (int dx = -20; dx <= 20; dx++) {
             for (int dy = -20; dy <= 20; dy++) {

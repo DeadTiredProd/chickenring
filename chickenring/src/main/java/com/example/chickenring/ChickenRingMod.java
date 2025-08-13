@@ -114,6 +114,78 @@ public class ChickenRingMod implements ModInitializer {
        public static final Block CHONKEN_NEST = new ChonkenNest(
         FabricBlockSettings.of(Material.SPONGE)
             .strength(0.3f)
+       );
+
+
+    //-----------------------
+    //Cultures//
+    //----------------------
+
+    public static final Item AGAR_DISH = new Item(new Item.Settings()
+        .group(ItemGroup.MISC)
+        .maxCount(8)
+    );
+    public static final Item PETRI_DISH = new Item(new Item.Settings()
+        .group(ItemGroup.MISC)
+        .maxCount(8)
+    );
+    public static final Item CHONKEN_CULTURE = new Item(new Item.Settings()
+        .group(ItemGroup.MISC)
+        .maxCount(8)
+    );
+    public static final Item ROOSTEN_CULTURE = new Item(new Item.Settings()
+        .group(ItemGroup.MISC)
+        .maxCount(8)
+    );
+    public static final Item CHUNKY_CHONKEN_CULTURE = new Item(new Item.Settings()
+        .group(ItemGroup.MISC)
+        .maxCount(8)
+    );
+    public static final Item CHUNKY_ROOSTEN_CULTURE = new Item(new Item.Settings()
+        .group(ItemGroup.MISC)
+        .maxCount(8)
+    );
+    public static final Item COLONIZED_CHUNKY_CHONKEN_CULTURE = new Item(new Item.Settings()
+        .group(ItemGroup.MISC)
+        .maxCount(8)
+    );
+    public static final Item COLONIZED_CHONKEN_CULTURE = new Item(new Item.Settings()
+        .group(ItemGroup.MISC)
+        .maxCount(8)
+    );
+    public static final Item COLONIZED_CHUNKY_ROOSTEN_CULTURE = new Item(new Item.Settings()
+        .group(ItemGroup.MISC)
+        .maxCount(8)
+    );
+    public static final Item COLONIZED_ROOSTEN_CULTURE = new Item(new Item.Settings()
+        .group(ItemGroup.MISC)
+        .maxCount(8)
+    );
+
+
+    //----------------
+    //EGGS
+    //---------------
+
+    public static final Item CHONKEN_EGG = new Item(new Item.Settings()
+        .group(ItemGroup.MISC)
+        .maxCount(16)
+    );
+    public static final Item ROOSTEN_EGG = new Item(new Item.Settings()
+        .group(ItemGroup.MISC)
+        .maxCount(16)
+    );
+    public static final Item INCUBATED_CHONKEN_EGG = new Item(new Item.Settings()
+        .group(ItemGroup.MISC)
+        .maxCount(16)
+    );
+    public static final Item INCUBATED_ROOSTEN_EGG = new Item(new Item.Settings()
+        .group(ItemGroup.MISC)
+        .maxCount(16)
+    );
+    public static final Item INCUBATED_CHUNKY_CHONKEN_EGG = new Item(new Item.Settings()
+        .group(ItemGroup.MISC)
+        .maxCount(8)
     );
 
     // --------------------
@@ -252,6 +324,33 @@ public class ChickenRingMod implements ModInitializer {
         registerItem("frozen_rotting_chicken", FROZEN_ROTTING_CHICKEN);
         registerItem("frozen_raw_chicken", FROZEN_RAW_CHICKEN);
         registerItem("frozen_cooked_chicken", FROZEN_COOKED_CHICKEN);
+        registerItem("chonken_egg", CHONKEN_EGG);
+        registerItem("roosten_egg", ROOSTEN_EGG);
+        registerItem("incubated_chonken_egg", INCUBATED_CHONKEN_EGG);
+        registerItem("incubated_roosten_egg", INCUBATED_ROOSTEN_EGG);
+        registerItem("incubated_chunky_chonken_egg", INCUBATED_CHUNKY_CHONKEN_EGG);
+        registerItem("agar_dish", AGAR_DISH);
+        registerItem("petri_dish", PETRI_DISH);
+        registerItem("chunky_chonken_culture", CHUNKY_CHONKEN_CULTURE);
+        registerItem("chunky_roosten_culture", CHUNKY_ROOSTEN_CULTURE);
+        registerItem("chonken_culture", CHONKEN_CULTURE);
+        registerItem("roosten_culture", ROOSTEN_CULTURE);
+        registerItem("colonized_roosten_culture", COLONIZED_ROOSTEN_CULTURE);
+        registerItem("colonized_chonken_culture", COLONIZED_CHONKEN_CULTURE);
+        registerItem("colonized_chunky_chonken_culture", COLONIZED_CHUNKY_CHONKEN_CULTURE);
+        registerItem("colonized_chunky_roosten_culture", COLONIZED_CHUNKY_ROOSTEN_CULTURE);
+        
+                
+
+
+
+        
+
+
+
+
+
+
         // Fluids + Bucket
         DARK_CHICKEN_ESSENCE_STILL = Registry.register(
             Registry.FLUID,

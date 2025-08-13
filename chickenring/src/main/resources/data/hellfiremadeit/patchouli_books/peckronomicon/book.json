@@ -1,7 +1,7 @@
 {
   "name": "item.hellfiremadeit.peckronomicon",
   "landing_text": "hellfiremadeit.landing",
-  "version": "1.0.27",
+  "version": "1.0.29",
   "book_texture": "hellfiremadeit:textures/gui/peckronomicon.png",
   "model": "hellfiremadeit:peckronomicon",
   "creative_tab": "Chicken Ring",

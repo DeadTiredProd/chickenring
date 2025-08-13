@@ -1,5 +1,5 @@
 {
-  "hellfiremadeit.modVersion": "1.0.27",
+  "hellfiremadeit.modVersion": "1.0.29",
   "item.hellfiremadeit.chicken_ring":                "Chicken Ring",
   "item.hellfiremadeit.rotting_chicken":             "Rotting Chicken",
   "item.hellfiremadeit.frozen_rotting_chicken":      "Frozen Rotting Chicken",
@@ -41,7 +41,23 @@
   "item.hellfiremadeit.chicken_egg_crate":          "Chicken Egg Crate",
   "item.hellfiremadeit.chonken_nest": "Chonken Nest",
   "block.hellfiremadeit.chonken_nest": "Chonken Nest",
-
+  "item.hellfiremadeit.chonken_egg": "Chonken Egg",
+  "item.hellfiremadeit.roosten_egg": "Roosten Egg",
+  "item.hellfiremadeit.incubated_chonken_egg": "Incubated Chonken Egg",
+  "item.hellfiremadeit.incubated_roosten_egg": "Incubated Roosten Egg",
+  "item.hellfiremadeit.chunky_chonken_egg": "Chunky Chonken Egg",
+  "item.hellfiremadeit.incubated_chunky_chonken_egg": "Incubated Chunky Chonken Egg",
+  "item.hellfiremadeit.petri_dish": "Petri Dish",
+  "item.hellfiremadeit.agar_dish": "Agar Dish",
+  "item.hellfiremadeit.chonken_culture": "Chonken Culutre",
+  "item.hellfiremadeit.roosten_culture": "Roosten Culture",
+  "item.hellfiremadeit.chunky_chonken_culture": "Chunky Chonken Culture",
+  "item.hellfiremadeit.chunky_roosten_culture": "Chunky Roosten Culture",
+  "item.hellfiremadeit.colonized_chonken_culture": "Colonized Chonken Culture",
+  "item.hellfiremadeit.colonized_roosten_culture": "Colonized Roosten Culture",
+  "item.hellfiremadeit.colonized_chunky_chonken_culture": "Colonized Chunky Chonken Culture",
+  "item.hellfiremadeit.colonized_chunky_roosten_culture": "Collonized Chunky Roosten Culture",
+  
   "advacements.hellfiremadeit.chicken_ring_root.title": "Chicken Ring",
   "advacements.hellfiremadeit.chicken_ring_root.description": "The beginning",
 

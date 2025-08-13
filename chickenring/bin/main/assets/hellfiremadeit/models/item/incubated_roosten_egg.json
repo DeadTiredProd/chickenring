@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "hellfiremadeit:item/incubated_roosten_egg"
+  }
+}
