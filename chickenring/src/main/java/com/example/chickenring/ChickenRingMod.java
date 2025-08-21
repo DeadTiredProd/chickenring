@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandler;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
@@ -35,6 +36,7 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.registry.Registry;
+import software.bernie.geckolib3.GeckoLib;
 
 public class ChickenRingMod implements ModInitializer {
     public static final String MOD_ID = "hellfiremadeit";
@@ -93,7 +95,7 @@ public class ChickenRingMod implements ModInitializer {
         .fireproof()
     );
 
-    public static final Item peckrONOMICON = new WrittenBookItem(new Item.Settings().maxCount(1).group(ItemGroup.MISC));
+    public static final Item PECKRONOMICON = new WrittenBookItem(new Item.Settings().maxCount(1).group(ItemGroup.MISC));
     public static final Item ROTTING_CHICKEN = new Item(new Item.Settings()
         .group(ItemGroup.FOOD)
         .food(ModFoodComponents.ROTTING_CHICKEN_FOOD)
@@ -241,7 +243,17 @@ public class ChickenRingMod implements ModInitializer {
     public void onInitialize() {
 
         System.out.println("ChickenRingMod: Initializing...");
-        Registry.register(Registry.ITEM, new Identifier("hellfiremadeit", "peckronomicon"), peckrONOMICON);
+        FlightNetworking.registerServerReceiver();
+        GeckoLib.initialize();
+        ServerLifecycleEvents.SERVER_STARTING.register(server -> {
+            server.getRecipeManager().setRecipes(
+                server.getRecipeManager().values().stream()
+                    .filter(r -> !r.getId().toString().equals("computercraft:computer_command"))
+                    .toList()
+            );
+        });
+
+        Registry.register(Registry.ITEM, new Identifier("hellfiremadeit", "peckronomicon"), PECKRONOMICON);
         PlayerJoinHandler.register();
         // Register sound events
         Registry.register(Registry.SOUND_EVENT, new Identifier(MOD_ID, "fowl_forge_ambient0"), FOWL_FORGE_AMBIENT0);
@@ -291,8 +303,8 @@ public class ChickenRingMod implements ModInitializer {
             FOWL_FORGE_RECIPE_SERIALIZER);
         
         FabricDefaultAttributeRegistry.register(CHONKEN, ChonkenEntity.createMobAttributes()
-               .add(EntityAttributes.GENERIC_MAX_HEALTH, 10.0D)
-               .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.25D));
+               .add(EntityAttributes.GENERIC_MAX_HEALTH, 5.0D)
+               .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.20D));
     
             // Register other blocks/items
         registerBlockWithItem("chicken_egg_crate", CHICKEN_EGG_CRATE, ItemGroup.FOOD);
